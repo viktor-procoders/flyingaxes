@@ -1,0 +1,44 @@
+# Set to true if you want static asset revisioning, helpful for cache busting
+REVISIONING: true
+
+# Gulp will reference these paths when it copies files
+PATHS:
+  # Path to dist folder
+  dist: "dist"
+  # Paths to static assets that aren't images, CSS, or JavaScript
+  assets:
+    - "src/assets/**/*"
+    - "!src/assets/{images,images/**/*,js,js/**/*,scss,scss/**/*}"
+  # Paths to Sass libraries, which can then be loaded with @import
+  sass:
+#    - "node_modules/bootstrap/scss/"
+  # Paths to SCSS entry points for webpack to bundle modules
+  entriestyles:
+    - "src/assets/scss/**/*"
+#    - "src/assets/scss/app.scss"
+#    - "src/assets/scss/admin.scss"
+#    - "src/assets/scss/blocks/border-card.scss"
+  # Paths to JavaScript entry points for webpack to bundle modules
+  entries:
+    - "src/assets/js/app.js"
+  # Paths for the package task to include/exclude in .zip archive
+  package:
+    - "**/*"
+    - "!**/node_modules/**"
+    - "!**/packaged/**"
+    - "!./src/**"
+    - "!**/codesniffer.ruleset.xml"
+    - "!**/composer.json"
+    - "!**/composer.lock"
+    - "!**/config.yml"
+    - "!**/config-default.yml"
+    - "!**/gulpfile.babel.js"
+    - "!**/package.json"
+    - "!**/package-lock.json"
+    - "!**/yarn.lock"
+    - "!**/webpack.config.js"
+  # Paths for PHP CodeSniffer
+  phpcs:
+    - "**/*.php"
+    - "!wpcs"
+    - "!wpcs/**"

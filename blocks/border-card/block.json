@@ -1,0 +1,42 @@
+{
+	"name": "cf/border-card",
+	"title": "Border Card Section",
+	"description": "Section with Border Cards",
+	"style": "",
+	"category": "codefresh",
+	"icon": "screenoptions",
+	"keywords": ["card", "columns", "items", "border"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block-render.php"
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"data": {
+				"preview_image_help": "block-image-preview.png"
+			}
+		}
+	},
+	"supports": {
+		"align": ["full"],
+		"spacing ": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"],
+			"units": [ "px" ]
+		},
+		"color" : {
+			"background": true,
+			"gradients": true
+		},
+		"anchor": true
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+
+	}
+
+}
