@@ -1,0 +1,1 @@
+(()=>{"use strict";class t{constructor(t){this.init()}init(){console.log("Main init")}}document.addEventListener("DOMContentLoaded",()=>new t)})();
