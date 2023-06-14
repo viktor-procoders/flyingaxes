@@ -11,13 +11,12 @@ PATHS:
     - "!src/assets/{images,images/**/*,js,js/**/*,scss,scss/**/*}"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
-#    - "node_modules/bootstrap/scss/"
+    - "node_modules/bootstrap/scss/"
   # Paths to SCSS entry points for webpack to bundle modules
   entriestyles:
-    - "src/assets/scss/**/*"
-#    - "src/assets/scss/app.scss"
-#    - "src/assets/scss/admin.scss"
-#    - "src/assets/scss/blocks/border-card.scss"
+    - "src/assets/scss/app.scss"
+    - "src/assets/scss/admin.scss"
+    - "src/assets/scss/blocks/*.scss"
   # Paths to JavaScript entry points for webpack to bundle modules
   entries:
     - "src/assets/js/app.js"

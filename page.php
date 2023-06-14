@@ -16,7 +16,13 @@ get_header();
 ?>
 
 	<main id="primary" class="site-main">
-
+		<div class="container">
+			<div class="grid text-center">
+				<div class="g-col-6 g-col-md-4">.g-col-6 g-col-md-4</div>
+				<div class="g-col-6 g-col-md-4">.g-col-6 g-col-md-4</div>
+				<div class="g-col-6 g-col-md-4">.g-col-6 g-col-md-4</div>
+			</div>
+		</div>
 		<?php
 		while ( have_posts() ) :
 			the_post();

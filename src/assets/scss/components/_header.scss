@@ -1,0 +1,51 @@
+.pc-header {
+  padding: 50px 0;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 13px;
+    width: 100%;
+    background-image: url("../images/line.png");
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.pc-logo {
+  display: inline-block;
+  margin-right: 40px;
+
+  > img {
+    object-fit: cover;
+  }
+}
+
+.pc-top-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  > li {
+    margin-right: 30px;
+
+    > a {
+      font-size: 18px;
+      font-weight: 600;
+      text-transform: uppercase;
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

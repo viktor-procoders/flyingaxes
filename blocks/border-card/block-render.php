@@ -59,7 +59,7 @@ $border_card = get_field( 'border_card' );
 				<p><?php echo $description ?></p>
 			<?php endif ?>
 			<?php if ( !empty($link['url']) && !empty($link['title']) ): ?>
-				<a href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
+				<a class="pc-button" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
 			<?php endif ?>
 		</div>
 	</section>
