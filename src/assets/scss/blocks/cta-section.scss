@@ -1,0 +1,85 @@
+@import "../settings.scss";
+
+.cta-section {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    z-index: 0;
+  }
+
+  &::before {
+    background-color: $blue;
+  }
+
+  &::after {
+    background-color: $red;
+    left: 50%;
+  }
+
+  &__inner {
+    @include media-breakpoint-up(md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+.cta-card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 45px 0;
+  width: 100%;
+  max-width: 375px;
+  color: $white;
+
+  &--red {
+    background-color: $red;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+
+    > span {
+      display: inline-block;
+      margin: 0 30px;
+    }
+
+    > svg {
+      margin: 0 4px;
+    }
+  }
+
+  &__image {
+    margin-bottom: 40px;
+  }
+
+  &__location {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 30px;
+  }
+
+  &__link {
+    &:hover,
+    &:focus {
+      background-color: $white!important;
+      color: $black!important;
+    }
+  }
+}

@@ -1,23 +1,10 @@
-// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "./node_modules/bootstrap/scss/functions";
-
-// 2. Include any default variable overrides here
 @import "settings.scss";
-
-// 3. Include remainder of required Bootstrap stylesheets
-@import "./node_modules/bootstrap/scss/mixins/breakpoints";
-@import "./node_modules/bootstrap/scss/mixins/grid";
-@import "./node_modules/bootstrap/scss/mixins/container";
-//Include any optional Bootstrap CSS as needed
-@import "./node_modules/bootstrap/scss/grid";
-@import "./node_modules/bootstrap/scss/containers";
-
-@import "lib/reset.scss";
-
 
 //components
 @import "components/header.scss";
 @import "components/button.scss";
+@import "components/fonts.scss";
+@import "components/_typography.scss";
 
 //templates
 @import "templates/front.scss";

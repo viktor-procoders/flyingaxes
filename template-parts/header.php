@@ -21,7 +21,7 @@
 						'menu_class'     => 'menu',
 						'items_wrap'     => '<ul class="%2$s pc-top-menu">%3$s</ul>',
 						'theme_location' => 'desktop_nav',
-//					'depth'          => 1,
+						//'depth'        => 1,
 						'fallback_cb'    => false,
 						'walker'         => new TopBarWalker(),
 					]

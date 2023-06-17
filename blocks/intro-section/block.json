@@ -1,0 +1,40 @@
+{
+	"name": "cf/intro-section",
+	"title": "Intro Section",
+	"description": "Intro Section",
+	"style": "",
+	"category": "flyingaxes",
+	"icon": "screenoptions",
+	"keywords": ["intro", "banner", "slider"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block-render.php"
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"data": {
+				"preview_image_help": "block-image-preview.jpg"
+			}
+		}
+	},
+	"supports": {
+		"align": ["full"],
+		"spacing ": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"],
+			"units": [ "px" ]
+		},
+		"color" : {
+			"background": true,
+			"gradients": true
+		},
+		"anchor": true
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	}
+}

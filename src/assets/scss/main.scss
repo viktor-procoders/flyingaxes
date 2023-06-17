@@ -3,3 +3,26 @@ img, svg {
   display: inline-block;
   height: auto;
 }
+
+body {
+  background-color: #e5e2db;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: $red;
+  }
+}
+
+.text-red {
+  color: $red;
+}
+
+.text-blue {
+  color: $blue;
+}

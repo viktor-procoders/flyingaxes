@@ -10,8 +10,8 @@
 // register new Gutenberg blocks category
 function add_custom_block_categories( $categories, $post ) {
 	$custom_category_one = array(
-		'slug' => 'codefresh',
-		'title' => __( 'Codefresh Sections', 'codefresh' ),
+		'slug' => 'flyingaxes',
+		'title' => __( 'Flying Axes', 'flyingaxes' ),
 		'icon'  => 'admin-appearance',
 	);
 	array_unshift( $categories, $custom_category_one);

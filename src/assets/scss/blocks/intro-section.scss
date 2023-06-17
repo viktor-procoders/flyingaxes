@@ -1,0 +1,49 @@
+@import '../settings.scss';
+@import "../lib/splide.scss";
+
+.intro-section {
+  position: relative;
+  //display: flex;
+  //align-items: center;
+  background-color: $brown;
+  background-size: cover;
+  background-position: center;
+
+  &__title {
+    font-size: 60px;
+    color: $white;
+  }
+
+  .splide {
+    &__slide {
+      visibility: visible;
+      min-height: 370px;
+      background-size: cover;
+      width: 100%;
+      @include media-breakpoint-up(lg) {
+        min-height: 540px;
+      }
+    }
+
+    &__arrows {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__arrow {
+      cursor: pointer;
+      border: none;
+      background-color: transparent;
+      transition: opacity 0.3s ease-in-out;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

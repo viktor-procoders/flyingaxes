@@ -1,4 +1,19 @@
-.editor-styles-wrapper {
-  @import "blocks/border-card.scss";
-}
 
+.wp-block-post-content {
+  @import "app.scss";
+  @import "blocks/intro-section.scss";
+  @import "blocks/experience-section.scss";
+  @import "blocks/cta-section.scss";
+
+  html :where(.wp-block) {
+    max-width: 1200px;
+  }
+
+  .text-red {
+    color: $red;
+  }
+
+  .text-blue {
+    color: $blue;
+  }
+}

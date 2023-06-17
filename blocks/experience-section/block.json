@@ -1,11 +1,11 @@
 {
-	"name": "cf/border-card",
-	"title": "Border Card Section",
-	"description": "Section with Border Cards",
+	"name": "cf/experience-section",
+	"title": "Experience Section",
+	"description": "Section with image and text",
 	"style": "",
-	"category": "codefresh",
+	"category": "flyingaxes",
 	"icon": "screenoptions",
-	"keywords": ["card", "columns", "items", "border"],
+	"keywords": ["image", "text", "about", "experience"],
 	"acf": {
 		"mode": "preview",
 		"renderTemplate": "block-render.php"
@@ -36,7 +36,5 @@
 			"type": "string",
 			"default": "full"
 		}
-
 	}
-
 }

@@ -1,9 +1,9 @@
 export class Main {
-  constructor(props) {
+  constructor() {
     this.init();
   }
 
   init() {
-    console.log('Main init');
+    console.log("Main init");
   }
 }

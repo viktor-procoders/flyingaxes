@@ -1,42 +1,15 @@
-//theme colors
-$blue: #1C4772;
-$white: #FAFAFA;
-$brown: #AA9072;
-$yellow: #E4BF65;
-$red: #BD3839;
-$green: #5A6647;
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "./node_modules/bootstrap/scss/functions";
 
-//theme settings
-$prefix: pc- !default;
-$enable-grid-classes:true !default;
-$enable-cssgrid:true !default;
-$enable-container-classes:true !default;
-$grid-columns: 12 !default;
-$grid-gutter-width: 1.8rem !default;
-$container-padding-x: $grid-gutter-width;
-$grid-row-columns: 6 !default;
-$spacer: 2rem !default;
-$spacers: (
-  0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-) !default;
-$gutters: $spacers !default;
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-) !default;
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
-) !default;
+// 2. Include any default variable overrides here
+@import "_variables.scss";
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "./node_modules/bootstrap/scss/mixins/breakpoints";
+@import "./node_modules/bootstrap/scss/mixins/grid";
+@import "./node_modules/bootstrap/scss/mixins/container";
+//Include any optional Bootstrap CSS as needed
+@import "./node_modules/bootstrap/scss/grid";
+@import "./node_modules/bootstrap/scss/containers";
+
+@import "lib/reset.scss";

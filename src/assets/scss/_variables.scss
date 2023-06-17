@@ -1,0 +1,45 @@
+//theme colors
+$blue: #1C4772;
+$white: #FAFAFA;
+$black: #000000;
+$brown: #AA9072;
+$yellow: #E4BF65;
+$red: #BD3839;
+$green: #5A6647;
+
+$body-font-family: 'DIN 2014', sans-serif;
+$headings-font-family-70: 'Knockout 70 Full Welterwt', sans-serif;
+$headings-font-family-68: 'Knockout 68 Full Featherwt', sans-serif;
+
+//containers & breakpoints settings
+$prefix: pc- !default;
+$enable-grid-classes: true !default;
+$enable-cssgrid: true !default;
+$enable-container-classes: true !default;
+$grid-columns: 12 !default;
+$grid-gutter-width: 1.8rem !default;
+$container-padding-x: $grid-gutter-width;
+$grid-row-columns: 6 !default;
+$spacer: 2rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+$gutters: $spacers !default;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1160px,
+) !default;
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+) !default;

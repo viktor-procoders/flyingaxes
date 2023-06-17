@@ -7,6 +7,9 @@
  * @package flyingaxes
  */
 
+/** Helpers */
+require_once ('inc/helpers.php');
+
 /** Various clean up functions */
 require_once( 'inc/cleanup.php' );
 
@@ -33,3 +36,6 @@ require_once( 'inc/navigation.php' );
 
 /** Walker */
 require_once( 'inc/TopBarWalker.php' );
+
+/**Editor customizations*/
+require_once( 'inc/tiny_mce.php' );
