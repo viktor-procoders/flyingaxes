@@ -63,7 +63,7 @@ if ( $is_preview ) {
 				</div>
 				<div class="col-lg-4 d-flex justify-content-center">
 					<?php if ( ! empty( $logo ) ): ?>
-						<img class="league-section__logo" src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>">
+						<img width="295" height="368" loading="lazy" class="league-section__logo" src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>">
 					<?php endif ?>
 				</div>
 				<div class="col-lg-4">

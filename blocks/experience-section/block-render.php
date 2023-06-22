@@ -51,6 +51,8 @@ $intro_section = get_field( 'experience_section' );
 				<div class="col-md-6 experience-section__image-col">
 					<?php if ( ! empty( $image ) ): ?>
 						<img
+							width="460"
+							height="310"
 							loading="lazy"
 							class="experience-section__image"
 							src="<?php echo $image['sizes']['460_310'] ?>"

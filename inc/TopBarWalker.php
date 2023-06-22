@@ -71,7 +71,7 @@ class TopBarWalker extends Walker_Nav_Menu {
 		$item_output .= $args->link_before . $title . $args->link_after;
 		$item_output .= '</a>';
 		if ( in_array( 'has-dropdown', $classes ) ) {
-			$item_output .= '<button class="pc-dropdown-button d-inline-block d-lg-none" data-dropdown-menu-toggle></button>';
+			$item_output .= '<button class="pc-dropdown-button d-inline-block d-lg-none" data-dropdown-menu-toggle aria-label="Open Dropdown menu"></button>';
 		}
 		$item_output .= $args->after;
 

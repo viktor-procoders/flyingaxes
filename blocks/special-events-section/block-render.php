@@ -62,7 +62,8 @@ $cta_right = $special_events_section['cta_left_column'];
 				<?php endif ?>
 				<div class="special-events-section__decor">
 					<?php starsDisplay( 2 ); ?>
-					<img src="<?php echo get_template_directory_uri() . '/dist/assets/images/target.png' ?>" alt="target image">
+					<img loading="lazy" width="60" height="60" src="<?php echo get_template_directory_uri() . '/dist/assets/images/target.png' ?>"
+					     alt="target image">
 					<?php starsDisplay( 2 ); ?>
 				</div>
 			</div>

@@ -92,7 +92,7 @@ $youtube_url = $my_array_of_vars['v'];
 						<?php foreach ( $socials as $social ): ?>
 							<?php if ( $social['url'] ): ?>
 								<a class="footer-socials__item" href="<?php echo $social['url'] ?>" target="_blank" aria-label="Link to <?php echo $social['icon']['title'] ?>">
-									<img loading="lazy" src="<?php echo $social['icon']['url'] ?>" alt="<?php echo $social['icon']['alt'] ?>">
+									<img width="50" height="50" loading="lazy" src="<?php echo $social['icon']['url'] ?>" alt="<?php echo $social['icon']['alt'] ?>">
 									<?php if ( $social['title'] ): ?>
 										<p><?php echo $social['title'] ?></p>
 									<?php endif ?>
@@ -125,7 +125,7 @@ $youtube_url = $my_array_of_vars['v'];
 				<?php endif ?>
 				<?php if ( ! empty( $logo ) ): ?>
 					<div class="pc-footer__logo">
-						<img loading="lazy" src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>">
+						<img width="130" height="70" loading="lazy" src="<?php echo $logo['url'] ?>" alt="<?php echo $logo['alt'] ?>">
 					</div>
 				<?php endif ?>
 				<?php if ($copyright): ?>
