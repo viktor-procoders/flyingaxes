@@ -53,16 +53,20 @@
       background-color: transparent;
       transition: opacity 0.3s ease-in-out;
 
+      &:disabled {
+        opacity: 0.3!important;
+      }
+
       &:hover {
         opacity: 0.7;
       }
 
       &--prev {
-        margin-left: -60px;
+        margin-left: -65px;
       }
 
       &--next {
-        margin-right: -60px;
+        margin-right: -65px;
       }
     }
   }

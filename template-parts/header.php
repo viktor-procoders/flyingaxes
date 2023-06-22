@@ -3,7 +3,8 @@
 <header class="pc-header" data-header>
 	<div class="pc-header__container container">
 		<div class="pc-header__inner">
-			<a class="pc-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>" aria-label="Home page url">
+			<a class="pc-logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" title="<?php bloginfo( 'name' ); ?>"
+			   aria-label="Home page url">
 				<?php if ( has_custom_logo() ) : ?>
 					<?php
 					$custom_logo_id = get_theme_mod( 'custom_logo' );

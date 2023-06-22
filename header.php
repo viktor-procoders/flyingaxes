@@ -19,9 +19,13 @@
 	<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class( 'overflow-hidden' ); ?>>
 <?php //wp_body_open(); ?>
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'flyingaxes' ); ?></a>
-	<?php get_template_part( 'template-parts/svg-sprite' ); ?>
-	<?php get_template_part( 'template-parts/header' ); ?>
-	<?php get_template_part( 'template-parts/offcanvas' ); ?>
+<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'flyingaxes' ); ?></a>
+<div class="pc-preloader" data-preloader>
+	<div class="pc-preloader__inner"></div>
+</div>
+<?php get_template_part( 'template-parts/svg-sprite' ); ?>
+<?php get_template_part( 'template-parts/header' ); ?>
+<?php get_template_part( 'template-parts/offcanvas' ); ?>
+

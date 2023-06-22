@@ -19,6 +19,10 @@
   .text-light-blue {
     color: $light-blue;
   }
+
+  .splide {
+    visibility: visible;
+  }
 }
 
 html :where(.wp-block) {

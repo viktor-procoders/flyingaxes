@@ -13,6 +13,7 @@ class IntroSection {
         type: 'loop',
         perPage: 1,
         speed: 1500,
+        autoHeight: true,
         perMove: 1,
         autoplay: true,
         pauseOnHover: false,

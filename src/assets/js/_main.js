@@ -9,6 +9,7 @@ export class Main {
 
     this.mobileMenu();
     this.stickyHeader();
+    this.preloader();
   }
 
   mobileMenu() {
@@ -40,15 +41,19 @@ export class Main {
   }
 
   stickyHeader() {
-    let prevScrollpos = window.pageYOffset
-    window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset;
-      if (prevScrollpos > currentScrollPos) {
-        document.querySelector('[data-header]').classList.remove('fixed');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 200) {
+        this.header.classList.add('fixed');
       } else {
-        document.querySelector('[data-header]').classList.add('fixed');
+        this.header.classList.remove('fixed');
       }
-      prevScrollpos = currentScrollPos;
-    }
+    });
+  }
+
+  preloader() {
+    window.addEventListener('DOMContentLoaded', () => {
+      document.querySelector('[data-preloader]').classList.add('loaded');
+      this.body.classList.remove('overflow-hidden');
+    });
   }
 }

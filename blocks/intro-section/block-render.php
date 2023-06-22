@@ -62,7 +62,18 @@ $intro_section = get_field( 'intro_slider' );
 			<div class="splide__track">
 				<div class="splide__list">
 					<?php foreach ( $intro_section as $slide ): ?>
-						<div class="splide__slide" <?php bg( $slide['image'] ) ?>></div>
+						<div class="splide__slide">
+							<picture class="d-block" style="text-align: center">
+								<source
+									srcset="<?php echo $slide['image']['url'] ?>"
+									media="(min-width: 1024px)">
+
+								<img class=""
+								     loading="lazy"
+								     src="<?php echo $slide['mobile_image']['url'] ?>"
+								     alt="<?php echo $slide['image']['alt'] ?>">
+							</picture>
+						</div>
 					<?php endforeach ?>
 				</div>
 			</div>

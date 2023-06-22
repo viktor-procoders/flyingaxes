@@ -17,12 +17,12 @@
   .splide {
     &__slide {
       visibility: visible;
-      min-height: 370px;
-      background-size: cover;
-      width: 100%;
+      //min-height: 370px;
+      //background-size: cover;
+      //width: 100%;
 
       @media (min-width: 768px) {
-        min-height: 540px;
+        //min-height: 540px;
       }
     }
 

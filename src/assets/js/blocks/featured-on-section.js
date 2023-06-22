@@ -12,7 +12,7 @@ class FeaturedOnSection {
       new Splide(element, {
         type: 'slide',
         perPage: 3,
-        speed: 1500,
+        speed: 1000,
         perMove: 1,
         drag: false,
         gap: 50,
@@ -22,13 +22,19 @@ class FeaturedOnSection {
         arrows: false,
         pagination: false,
         breakpoints: {
-          768: {
+          992: {
             perPage: 1,
             drag: true,
+            autoplay: true,
+            interval: 3000,
+            pauseOnHover: true,
+            rewind: true,
             perMove: 1,
           },
           640: {
             arrows: true,
+            autoplay: false,
+            rewind: false,
             drag: true,
             perPage: 1,
           },
