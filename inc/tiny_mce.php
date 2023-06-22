@@ -117,6 +117,12 @@ add_filter( 'tiny_mce_before_init', function ( $init ) {
 				'title' => 'Color',
 				'items' => [
 					[
+						'title'    => 'Light Blue',
+						'selector' => 'h1,h2,h3,h4,h5,h6,p',
+						'inline'   => 'span',
+						'classes'  => 'text-light-blue'
+					],
+					[
 						'title'    => 'Blue',
 						'selector' => 'h1,h2,h3,h4,h5,h6,p',
 						'inline'   => 'span',

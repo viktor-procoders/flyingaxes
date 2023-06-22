@@ -34,9 +34,11 @@ if ( $is_preview ) {
 	$wrapper_attributes = '';
 }
 
-$cta_section = get_field( 'cta_section' );
-$left_column = $cta_section['left_column'];
-$right_column = $cta_section['right_column'];
+
+[
+	'left_column'  => $left_column,
+	'right_column' => $right_column,
+] = get_field( 'cta_section' );
 ?>
 
 
@@ -47,30 +49,22 @@ $right_column = $cta_section['right_column'];
 	?>
 <?php else: ?>
 	<section class="cta-section" id="<?php echo esc_attr( $id ); ?>" <?php echo $wrapper_attributes; ?>>
-		<div class="container">
+		<div class="container cta-section__container">
 			<div class="cta-section__inner">
 				<div class="cta-card cta-card--blue">
 					<?php if ( $left_column['title'] ): ?>
 						<p class="cta-card__title h5">
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
+							<?php starsDisplay(2); ?>
 							<span><?php echo $left_column['title'] ?></span>
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
+							<?php starsDisplay(2); ?>
 						</p>
 					<?php endif ?>
 					<?php if ( ! empty( $left_column['image'] ) ): ?>
 						<img
 							class="cta-card__image"
 							loading="lazy"
+							width="300"
+							height="250"
 							src="<?php echo $left_column['image']['sizes']['300_250'] ?>"
 							srcset="<?php echo $left_column['image']['sizes']['600_500'] ?> 2x"
 							alt="<?php echo $left_column['image']['alt'] ?>">
@@ -88,25 +82,17 @@ $right_column = $cta_section['right_column'];
 				<div class="cta-card cta-card--red">
 					<?php if ( $right_column['title'] ): ?>
 						<p class="cta-card__title h5">
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
+							<?php starsDisplay(2); ?>
 							<span><?php echo $right_column['title'] ?></span>
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
-							<svg width="21" height="19">
-								<use xlink:href="#star"/>
-							</svg>
+							<?php starsDisplay(2); ?>
 						</p>
 					<?php endif ?>
 					<?php if ( ! empty( $right_column['image'] ) ): ?>
 						<img
 							class="cta-card__image"
 							loading="lazy"
+							width="300"
+							height="250"
 							src="<?php echo $right_column['image']['sizes']['300_250'] ?>"
 							srcset="<?php echo $right_column['image']['sizes']['600_500'] ?> 2x"
 							alt="<?php echo $right_column['image']['alt'] ?>">

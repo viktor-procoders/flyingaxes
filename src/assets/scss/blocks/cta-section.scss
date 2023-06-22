@@ -1,4 +1,4 @@
-@import "../settings.scss";
+@import "../variables.scss";
 
 .cta-section {
   position: relative;
@@ -14,18 +14,43 @@
   }
 
   &::before {
+    display: none;
     background-color: $blue;
+    @media (min-width: 992px) {
+      display: block;
+    }
   }
 
   &::after {
+    display: none;
     background-color: $red;
     left: 50%;
+    @media (min-width: 992px) {
+      display: block;
+    }
+  }
+
+  &__container {
+    max-width: 100%;
+
+    @media (min-width: 992px) {
+      max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+      max-width: 1140px;
+    }
   }
 
   &__inner {
-    @include media-breakpoint-up(md) {
-      display: flex;
-      justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 -12px;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      margin: 0;
     }
   }
 }
@@ -39,8 +64,11 @@
   justify-content: center;
   padding: 45px 0;
   width: 100%;
-  max-width: 375px;
   color: $white;
+
+  @media (min-width: 992px) {
+    max-width: 420px;
+  }
 
   &--red {
     background-color: $red;
@@ -51,13 +79,18 @@
   }
 
   &__title {
+    font-size: 25px;
     display: flex;
     align-items: center;
     margin-bottom: 30px;
+    font-weight: 300;
 
     > span {
       display: inline-block;
-      margin: 0 30px;
+      margin: 0 15px;
+      @media (min-width: 768px) {
+        margin: 0 30px;
+      }
     }
 
     > svg {
@@ -70,7 +103,8 @@
   }
 
   &__location {
-    font-size: 30px;
+    font-family: $prohibition;
+    font-size: 50px;
     font-weight: 300;
     margin-bottom: 30px;
   }
@@ -78,8 +112,8 @@
   &__link {
     &:hover,
     &:focus {
-      background-color: $white!important;
-      color: $black!important;
+      background-color: $white !important;
+      color: $black !important;
     }
   }
 }

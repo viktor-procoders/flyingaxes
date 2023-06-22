@@ -11,9 +11,7 @@
 
 ?>
 
-<footer id="colophon" class="site-footer">
-	FOOTER
-</footer><!-- #colophon -->
+<?php get_template_part('template-parts/footer') ?>
 
 <?php wp_footer(); ?>
 

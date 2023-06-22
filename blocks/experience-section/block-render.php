@@ -47,16 +47,18 @@ $intro_section = get_field( 'experience_section' );
 <?php else: ?>
 	<section class="experience-section" id="<?php echo esc_attr( $id ); ?>" <?php echo $wrapper_attributes; ?>>
 		<div class="container">
-			<div class="grid">
-				<div class="g-col-12 g-col-md-6">
+			<div class="row">
+				<div class="col-md-6 experience-section__image-col">
 					<?php if ( ! empty( $image ) ): ?>
 						<img
+							loading="lazy"
+							class="experience-section__image"
 							src="<?php echo $image['sizes']['460_310'] ?>"
 							srcset="<?php echo $image['sizes']['920_620'] ?> 2x"
 							alt="<?php echo $image['alt'] ?>">
 					<?php endif ?>
 				</div>
-				<div class="g-col-12 g-col-md-6 g-start-lg-7">
+				<div class="col-md-6">
 					<?php if ( $text ): ?>
 						<div><?php echo $text ?></div>
 					<?php endif ?>

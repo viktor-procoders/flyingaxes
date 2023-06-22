@@ -8,7 +8,7 @@
  */
 
 /** Helpers */
-require_once ('inc/helpers.php');
+require_once( 'inc/helpers.php' );
 
 /** Various clean up functions */
 require_once( 'inc/cleanup.php' );

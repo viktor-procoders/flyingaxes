@@ -24,3 +24,4 @@
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'flyingaxes' ); ?></a>
 	<?php get_template_part( 'template-parts/svg-sprite' ); ?>
 	<?php get_template_part( 'template-parts/header' ); ?>
+	<?php get_template_part( 'template-parts/offcanvas' ); ?>

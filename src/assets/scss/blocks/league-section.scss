@@ -1,0 +1,102 @@
+@import "../variables.scss";
+
+.league-section {
+  padding: 60px 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: $white;
+
+  @media (min-width: 768px) {
+    padding: 90px 0;
+  }
+
+  &__stars {
+    > svg {
+      margin: 0 4px;
+    }
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+
+    @media (min-width: 992px) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__description {
+    margin-top: 40px;
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 40px;
+
+    @media (min-width: 992px) {
+      text-align: left;
+      margin-bottom: 0;
+    }
+  }
+
+  &__rules {
+    text-align: center;
+    margin-top: 40px;
+
+    a {
+      color: $white;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 5px;
+
+      &:hover,
+      &:focus {
+        color: $white;
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__cta-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 60px;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+  }
+
+  &__cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 43px;
+    font-family: $prohibition;
+    color: $white;
+    padding: 30px;
+    margin: 0 -12px;
+
+    @media (min-width: 768px) {
+      margin: 0;
+    }
+
+    > a {
+      margin-top: 35px;
+
+      &:hover,
+      &:focus {
+        background-color: $white !important;
+        color: $black !important;
+      }
+    }
+
+    &--blue {
+      background-color: $blue;
+    }
+
+    &--red {
+      background-color: $red;
+    }
+  }
+}
+

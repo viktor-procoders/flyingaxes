@@ -4,10 +4,9 @@
   @import "blocks/intro-section.scss";
   @import "blocks/experience-section.scss";
   @import "blocks/cta-section.scss";
-
-  html :where(.wp-block) {
-    max-width: 1200px;
-  }
+  @import "blocks/special-events-section.scss";
+  @import "blocks/league-section.scss";
+  @import "blocks/featured-on-section.scss";
 
   .text-red {
     color: $red;
@@ -16,4 +15,12 @@
   .text-blue {
     color: $blue;
   }
+
+  .text-light-blue {
+    color: $light-blue;
+  }
+}
+
+html :where(.wp-block) {
+  max-width: 1200px;
 }

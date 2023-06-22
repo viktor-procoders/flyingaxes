@@ -107,18 +107,16 @@
   font-display: swap;
 }
 
-/*END DIN 2014*/
+/*KNOCKOUT*/
 
-/*Knockout*/
-
-//@font-face {
-//  font-family: 'Knockout 30 Junior Welterwt';
-//  src: url('../fonts/knockout/Knockout-30JuniorWelterwt.woff2') format('woff2'),
-//  url('../fonts/knockout/Knockout-30JuniorWelterwt.woff') format('woff');
-//  font-weight: 300;
-//  font-style: normal;
-//  font-display: swap;
-//}
+@font-face {
+  font-family: 'Knockout 30 Junior Welterwt';
+  src: url('../fonts/knockout/Knockout-30JuniorWelterwt.woff2') format('woff2'),
+  url('../fonts/knockout/Knockout-30JuniorWelterwt.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 //@font-face {
 //  font-family: 'Knockout 33 Junior Heviwt';
@@ -146,7 +144,7 @@
 //  font-style: normal;
 //  font-display: swap;
 //}
-
+//
 //@font-face {
 //  font-family: 'Knockout 69 Full Liteweight';
 //  src: url('../fonts/knockout/Knockout-69FullLiteweight.woff2') format('woff2'),
@@ -155,7 +153,7 @@
 //  font-style: normal;
 //  font-display: swap;
 //}
-
+//
 //@font-face {
 //  font-family: 'Knockout 67 Full Bantamwt';
 //  src: url('../fonts/knockout/Knockout-67FullBantamwt.woff2') format('woff2'),
@@ -164,7 +162,7 @@
 //  font-style: normal;
 //  font-display: swap;
 //}
-
+//
 //@font-face {
 //  font-family: 'Knockout 31 Junior Middlewt';
 //  src: url('../fonts/knockout/Knockout-31JuniorMiddlewt.woff2') format('woff2'),
@@ -173,7 +171,7 @@
 //  font-style: normal;
 //  font-display: swap;
 //}
-
+//
 //@font-face {
 //  font-family: 'Knockout 34 Junior Sumo';
 //  src: url('../fonts/knockout/Knockout-34JuniorSumo.woff2') format('woff2'),
@@ -182,7 +180,7 @@
 //  font-style: normal;
 //  font-display: swap;
 //}
-
+//
 //@font-face {
 //  font-family: 'Knockout 66 Full Flyweight';
 //  src: url('../fonts/knockout/Knockout-66FullFlyweight.woff2') format('woff2'),
@@ -201,3 +199,13 @@
   font-display: swap;
 }
 
+/*PROHIBITION*/
+
+@font-face {
+  font-family: 'Prohibition';
+  src: url('../fonts/prohibition/prohibition.woff2') format('woff2'),
+  url('../fonts/prohibition/prohibition.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

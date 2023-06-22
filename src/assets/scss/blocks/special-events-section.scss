@@ -1,0 +1,123 @@
+@import "../variables.scss";
+
+.special-events-section {
+  background-color: $white;
+  padding-top: 80px;
+  overflow: hidden;
+
+  &__intro {
+    text-align: center;
+  }
+
+  &__subtitle {
+    line-height: 1;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: $headings-font-family-30;
+    margin-bottom: 20px;
+    color: $blue;
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
+  &__title {
+    color: $blue;
+    margin-bottom: 20px;
+  }
+
+  &__decor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+
+    > img {
+      margin: 0 16px;
+    }
+
+    > svg {
+      flex-shrink: 0;
+      margin: 0 4px;
+    }
+
+    &:before, &::after {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 100%;
+      max-width: 140px;
+      background-color: #ABABAB;
+    }
+
+    &::before {
+      margin-right: 16px;
+    }
+
+    &::after {
+      margin-left: 16px;
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 100%;
+
+    > picture {
+      display: inline-block;
+    }
+  }
+
+  &__links-wrapper {
+    position: relative;
+    height: 180px;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  &__links {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 2200px;
+
+    > a {
+      font-family: $headings-font-family-30;
+      font-weight: 300;
+      display: inline-flex;
+      white-space: nowrap;
+      margin: 12px 15px;
+      color: $yellow;
+      font-size: 40px;
+      text-decoration: none;
+      &:hover,
+      &:focus {
+        color: $blue;
+      }
+
+      &:nth-child(odd) {
+        font-family: $headings-font-family-70;
+        font-size: 60px;
+        font-weight: 600;
+      }
+    }
+  }
+  &__description {
+    font-size: 20px;
+    color: $black;
+    text-align: center;
+    max-width: 700px;
+    margin: 65px auto;
+    line-height: 1.5;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+}

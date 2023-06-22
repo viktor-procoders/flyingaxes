@@ -1,7 +1,11 @@
-@import "settings.scss";
+@import "variables.scss";
+
+@import "lib/bootstrap-reboot.scss";
+@import "lib/bootstrap-grid.scss";
 
 //components
 @import "components/header.scss";
+@import "components/footer.scss";
 @import "components/button.scss";
 @import "components/fonts.scss";
 @import "components/_typography.scss";

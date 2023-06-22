@@ -1,4 +1,4 @@
-@import '../settings.scss';
+@import '../variables.scss';
 @import "../lib/splide.scss";
 
 .intro-section {
@@ -20,7 +20,8 @@
       min-height: 370px;
       background-size: cover;
       width: 100%;
-      @include media-breakpoint-up(lg) {
+
+      @media (min-width: 768px) {
         min-height: 540px;
       }
     }
@@ -37,10 +38,12 @@
     }
 
     &__arrow {
+      color: $white;
       cursor: pointer;
       border: none;
       background-color: transparent;
       transition: opacity 0.3s ease-in-out;
+
       &:hover {
         opacity: 0.7;
       }

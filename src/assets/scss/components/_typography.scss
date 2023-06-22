@@ -3,45 +3,49 @@ body {
   font-weight: 300;
   line-height: 1.7;
   font-family: $body-font-family;
-}
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
-  font-weight: bold;
-  line-height: 1.1;
-  margin-bottom: 16px;
-  margin-top: 0;
-}
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 16px;
+    margin-top: 0;
+  }
 
-h1, .h1 {
-  font-size: 80px;
-  font-family: $headings-font-family-70;
-}
+  h1, .h1 {
+    font-size: 52px;
+    font-family: $headings-font-family-70;
+    @media (min-width: 768px) {
+      font-size: 80px;
+    }
+  }
 
-h2, .h2 {
-  font-size: 60px;
-  font-family: $headings-font-family-68;
-}
+  h2, .h2 {
+    font-size: 60px;
+    font-family: $headings-font-family-68;
 
-h3, .h3 {
-  font-size: 50px;
-}
+  }
 
-h4, .h4 {
-  font-size: 50px;
-  font-family: $headings-font-family-70;
-}
+  h3, .h3 {
+    font-size: 50px;
+  }
 
-h5, .h5 {
-  font-size: 30px;
-  font-family: $headings-font-family-70;
-}
+  h4, .h4 {
+    font-size: 50px;
+    font-family: $headings-font-family-70;
+  }
+
+  h5, .h5 {
+    font-size: 30px;
+    font-family: $headings-font-family-30;
+  }
 
 
-p {
-  margin-top: 0;
-  margin-bottom: 8px;
+  p {
+    margin-top: 0;
+    margin-bottom: 8px;
 
-  &:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }

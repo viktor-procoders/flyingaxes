@@ -1,5 +1,11 @@
 <?php
 
+function starsDisplay( $count ): void {
+	for ( $i = 0; $i < $count; $i ++ ) {
+		echo '<svg width="21" height="19"><use xlink:href="#star"/></svg>';
+	}
+}
+
 function get_page_ids_by_template( $template ) {
 	$args = [
 		'post_type'  => 'page',

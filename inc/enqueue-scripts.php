@@ -29,6 +29,9 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_register_style( 'intro-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'intro-section.css' ), null, null );
 	wp_register_style( 'experience-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'experience-section.css' ), null, null );
 	wp_register_style( 'cta-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'cta-section.css' ), null, null );
+	wp_register_style( 'special-events-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'special-events-section.css' ), null, null );
+	wp_register_style( 'league-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'league-section.css' ), null, null );
+	wp_register_style( 'featured-on-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'featured-on-section.css' ), null, null );
 
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
@@ -38,6 +41,7 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	// register g-blocks scripts
 	wp_register_script( 'intro-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'intro-section.js' ), null, null );
+	wp_register_script( 'featured-on-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'featured-on-section.js' ), null, null );
 
 	wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'app.js' ), null, null );
 
