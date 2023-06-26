@@ -15,6 +15,7 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 wp_enqueue_style( 'special-events-section' );
+wp_enqueue_script( 'special-events-section' );
 
 // Create class attribute allowing for custom "className" and "align" values.
 $classes = 'special-events-section';
@@ -34,14 +35,17 @@ if ( $is_preview ) {
 	$wrapper_attributes = '';
 }
 
-$special_events_section = get_field( 'special_events_section' );
-$title = $special_events_section['title'];
-$subtitle = $special_events_section['subtitle'];
-$gallery = $special_events_section['gallery'];
-$links = $special_events_section['links'];
-$description = $special_events_section['description'];
-$cta_left = $special_events_section['cta_left_column'];
-$cta_right = $special_events_section['cta_left_column'];
+[
+	'title'            => $title,
+	'subtitle'         => $subtitle,
+	'gallery'          => $gallery,
+	'links_top'        => $links_top,
+	'links_bottom'     => $links_bottom,
+	'description'      => $description,
+	'cta_left_column'  => $cta_left,
+	'cta_right_column' => $cta_right,
+] = get_field( 'special_events_section' );
+
 ?>
 
 
@@ -78,17 +82,51 @@ $cta_right = $special_events_section['cta_left_column'];
 					<?php endforeach ?>
 				</div>
 			<?php endif ?>
-			<?php if ( ! empty( $links ) ): ?>
-				<div class="special-events-section__links-wrapper d-none d-md-block">
-					<div class="special-events-section__links">
-						<?php foreach ( $links as $link ): ?>
-							<a href="<?php echo $link['link']['url'] ?>">
-								<?php echo $link['link']['title'] ?>
-							</a>
+
+
+			<div class="splide" data-links-ticker-1>
+				<div class="splide__track">
+					<div class="splide__list special-events-section__links">
+						<?php foreach ( $links_top as $link ): ?>
+							<div class="splide__slide">
+								<a href="<?php echo $link['link']['url'] ?>">
+									<?php echo $link['link']['title'] ?>
+								</a>
+							</div>
+						<?php endforeach ?>
+						<?php foreach ( $links_top as $link ): ?>
+							<div class="splide__slide">
+								<a href="<?php echo $link['link']['url'] ?>">
+									<?php echo $link['link']['title'] ?>
+								</a>
+							</div>
 						<?php endforeach ?>
 					</div>
 				</div>
-			<?php endif ?>
+			</div>
+
+			<div class="splide" data-links-ticker-2>
+				<div class="splide__track">
+					<div class="splide__list special-events-section__links">
+						<?php foreach ( $links_bottom as $link ): ?>
+							<div class="splide__slide">
+								<a href="<?php echo $link['link']['url'] ?>">
+									<?php echo $link['link']['title'] ?>
+								</a>
+							</div>
+						<?php endforeach ?>
+						<?php foreach ( $links_bottom as $link ): ?>
+							<div class="splide__slide">
+								<a href="<?php echo $link['link']['url'] ?>">
+									<?php echo $link['link']['title'] ?>
+								</a>
+							</div>
+						<?php endforeach ?>
+					</div>
+				</div>
+			</div>
+
+
 		</div>
 		<div class="container">
 			<?php if ( $description ): ?>

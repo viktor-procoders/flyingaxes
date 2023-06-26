@@ -42,6 +42,7 @@ add_action( 'wp_enqueue_scripts', function () {
 	// register g-blocks scripts
 	wp_register_script( 'intro-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'intro-section.js' ), null, null );
 	wp_register_script( 'featured-on-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'featured-on-section.js' ), null, null );
+	wp_register_script( 'special-events-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'special-events-section.js' ), null, null );
 
 	wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'app.js' ), null, null );
 

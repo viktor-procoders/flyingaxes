@@ -88,8 +88,8 @@
                 },
                 {
                     "key": "field_6490476e5d885",
-                    "label": "Links",
-                    "name": "links",
+                    "label": "Links Top",
+                    "name": "links_top",
                     "aria-label": "",
                     "type": "repeater",
                     "instructions": "",
@@ -124,6 +124,47 @@
                             },
                             "return_format": "array",
                             "parent_repeater": "field_6490476e5d885"
+                        }
+                    ]
+                },
+                {
+                    "key": "field_64997bccedc19",
+                    "label": "Links Bottom",
+                    "name": "links_bottom",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "row",
+                    "pagination": 0,
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Add Link",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_64997bccedc1a",
+                            "label": "Link",
+                            "name": "link",
+                            "aria-label": "",
+                            "type": "link",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "array",
+                            "parent_repeater": "field_64997bccedc19"
                         }
                     ]
                 },
@@ -316,5 +357,5 @@
     "active": true,
     "description": "Gutenberg",
     "show_in_rest": 0,
-    "modified": 1687268800
+    "modified": 1687780309
 }
