@@ -1,0 +1,40 @@
+{
+	"name": "cf/gift-and-blog-section",
+	"title": "Gift card and Blog Section",
+	"description": "Section with gift card and blog posts",
+	"style": "",
+	"category": "flyingaxes",
+	"icon": "screenoptions",
+	"keywords": ["gift", "card", "blog", "posts"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block-render.php"
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"data": {
+				"preview_image_help": "block-image-preview.png"
+			}
+		}
+	},
+	"supports": {
+		"align": ["full"],
+		"spacing ": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"],
+			"units": [ "px" ]
+		},
+		"color" : {
+			"background": true,
+			"gradients": true
+		},
+		"anchor": true
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	}
+}

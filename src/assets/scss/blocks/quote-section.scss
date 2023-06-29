@@ -1,0 +1,51 @@
+@import "../variables.scss";
+@import "../lib/splide.scss";
+
+.quote-section {
+  background-color: $blue;
+  color: $white;
+  padding: 40px 0;
+
+  .splide {
+    text-align: center;
+
+    &__slide {
+      transform: translateX(0) !important;
+    }
+  }
+
+  .quote {
+    &__title {
+      text-transform: uppercase;
+      color: $yellow;
+    }
+
+    &__rating {
+      font-size: 30px;
+
+      &::before {
+        content: '★★★★★';
+        background: linear-gradient(90deg, $yellow var(--percent), $dark-gray var(--percent));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &__text {
+      font-size: 50px;
+      font-family: $prohibition;
+      margin-bottom: 30px;
+
+      @media (min-width: 768px) {
+        font-size: 30px;
+      }
+    }
+
+    &__author {
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 30px;
+    }
+  }
+}
+

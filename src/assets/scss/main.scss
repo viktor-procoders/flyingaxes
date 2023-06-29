@@ -28,9 +28,13 @@ img, svg {
   height: auto;
 }
 
+strong {
+  font-weight: bold;
+}
+
 body {
   background-color: $light-gray;
-  line-height: 1.2;
+  line-height: 1.5;
 
   &.overflow-hidden {
     overflow: hidden;
@@ -57,6 +61,13 @@ a {
 
 .text-red {
   color: $red;
+
+  a {
+    &:hover,
+    &:focus {
+      color: $blue;
+    }
+  }
 }
 
 .text-blue {
@@ -67,6 +78,12 @@ a {
   color: $light-blue;
 }
 
+.pc-main {
+  figure.wp-block-gallery {
+    gap: 4px;
+    margin: 0;
+  }
+}
 
 .pc-preloader {
   position: fixed;

@@ -1,0 +1,97 @@
+@import "../variables.scss";
+@import "../lib/splide.scss";
+
+.local-events-section {
+  background-color: $white;
+  padding: 60px 0;
+  overflow: hidden;
+  background-size: cover;
+
+  &__intro {
+    text-align: center;
+  }
+
+  &__subtitle {
+    line-height: 1;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: $headings-font-family-30;
+    margin-bottom: 20px;
+    color: $blue;
+    @media (min-width: 768px) {
+      font-size: 40px;
+    }
+  }
+
+  &__title {
+    color: $blue;
+    margin-bottom: 20px;
+  }
+
+  &__decor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 70px;
+
+    > img {
+      margin: 0 16px;
+    }
+
+    > svg {
+      flex-shrink: 0;
+      margin: 0 4px;
+    }
+
+    &:before, &::after {
+      display: block;
+      content: "";
+      height: 2px;
+      width: 100%;
+      max-width: 140px;
+      background-color: #ABABAB;
+    }
+
+    &::before {
+      margin-right: 16px;
+    }
+
+    &::after {
+      margin-left: 16px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  &__events {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 40px;
+
+    > a {
+      margin: 10px;
+      width: 100%;
+      @media (min-width: 768px) {
+        margin: 25px;
+        width: auto;
+      }
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+  }
+
+  &__subheading {
+    color: $blue;
+  }
+
+  &__description {
+    margin-top: 16px;
+    font-style: italic;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../variables.scss";
+
+.local-league-section {
+  position: relative;
+  z-index: 1;
+  background-size: cover;
+  padding: 60px 0;
+  color: $white;
+
+  &__text {
+    p {
+      font-weight: 300;
+      color: #fff;
+
+      > a {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__photo {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    max-height: 80%;
+    transform: translateY(-50%);
+    z-index: -1;
+
+    @media (min-width: 1200px) {
+      display: block;
+      max-width: 240px;
+    }
+    @media (min-width: 1400px) {
+      display: block;
+      max-width: none;
+    }
+  }
+}
+
