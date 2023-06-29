@@ -1,0 +1,112 @@
+@import "../variables.scss";
+
+.info-section {
+  position: relative;
+  padding: 50px 0;
+  overflow: hidden;
+
+  @media (min-width: 998px) {
+    padding: 85px 0;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    mix-blend-mode: screen;
+    background-image: url('../images/sketchgrain.png');
+  }
+}
+
+.pc-tab-title {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent;
+  border: none;
+  font-size: 14px;
+  padding: 0;
+  font-weight: 600;
+  color: $blue;
+  transition: color .3s ease-in-out;
+
+  @media (min-width: 998px) {
+    font-size: 18px;
+  }
+
+  &::after {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: currentColor;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+
+  > img {
+    max-height: 45%;
+    opacity: 0;
+    margin-bottom: 8px;
+    transition: opacity .3s ease-in-out;
+    @media (min-width: 998px) {
+      max-height: none;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &.active {
+    color: $red;
+
+    > img, &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.pc-tab-content {
+  display: none;
+  padding: 30px;
+  border-radius: 20px;
+  border: 0.5px dashed rgba(0, 0, 0, 0.50);
+  background-color: rgba(255, 255, 255, 0.50);
+  box-shadow: 0 4px 11px 0 rgba(0, 0, 0, 0.05);
+
+  &.active {
+    display: block;
+  }
+
+  &__text {
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-size: 16px;
+    columns: 2 150px;
+    column-gap: 50px;
+  }
+
+  &__list-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+@import "../variables.scss";
+
+.brewery-selection-section {
+  background-color: #ffffff;
+  padding: 55px 0;
+
+  &__title {
+    color: $blue;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 45px;
+
+    > img {
+      margin: 10px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 15px;
+
+    a {
+      font-weight: bold;
+      color: $red;
+    }
+  }
+
+  &__image {
+    text-align: center;
+  }
+}
