@@ -63,7 +63,7 @@ if ( $is_preview ) {
 				</div>
 				<div class="col-lg-5 offset-lg-1">
 					<div class="pc-tabs">
-						<div class="mb-4 ">
+						<div class="mb-4">
 							<div class="d-flex justify-content-between pc-tabs__wrapper">
 								<?php $i = 1; ?>
 								<?php foreach ( $tabs as $tab ): ?>
@@ -85,23 +85,57 @@ if ( $is_preview ) {
 
 						<?php $j = 1; ?>
 						<?php foreach ( $tabs as $tab ): ?>
+							<?php if ( ! empty( $tab['image'] ) ): ?>
+								<div class="pc-tab-content <?php echo $j === 1 ? 'active' : '' ?>" data-tab-content="<?php echo $j . $block['id'] ?>">
+									<div class="row">
+										<div class="col-lg-6">
+											<?php if ( $tab['content'] ): ?>
+												<div class="pc-tab-content__text"><?php echo $tab['content'] ?></div>
+											<?php endif ?>
 
-							<div class="pc-tab-content <?php echo $j === 1 ? 'active' : '' ?>" data-tab-content="<?php echo $j . $block['id'] ?>">
-								<?php if ( $tab['content'] ): ?>
-									<div class="pc-tab-content__text"><?php echo $tab['content'] ?></div>
-								<?php endif ?>
+											<?php if ( ! empty( $tab['list'] ) ): ?>
+												<ul class="pc-tab-content__list">
+													<?php foreach ( $tab['list'] as $item ): ?>
+														<li class="pc-tab-content__list-item">
+															<strong><?php echo $item['title'] ?></strong>
+															<span><?php echo $item['value'] ?></span>
+														</li>
+													<?php endforeach ?>
+												</ul>
+											<?php endif ?>
 
-								<?php if ( ! empty( $tab['list'] ) ): ?>
-									<ul class="pc-tab-content__list">
-										<?php foreach ( $tab['list'] as $item ): ?>
-											<li class="pc-tab-content__list-item">
-												<strong><?php echo $item['title'] ?></strong>
-												<span><?php echo $item['value'] ?></span>
-											</li>
-										<?php endforeach ?>
-									</ul>
-								<?php endif ?>
-							</div>
+											<?php if ( $tab['bottom_text'] ): ?>
+												<div class=""><?php echo $tab['bottom_text'] ?></div>
+											<?php endif ?>
+										</div>
+										<div class="col-lg-6">
+											<img src="<?php echo $tab['image']['url'] ?>" alt="<?php echo $tab['image']['alt'] ?>">
+										</div>
+									</div>
+
+								</div>
+							<?php else: ?>
+								<div class="pc-tab-content <?php echo $j === 1 ? 'active' : '' ?>" data-tab-content="<?php echo $j . $block['id'] ?>">
+									<?php if ( $tab['content'] ): ?>
+										<div class="pc-tab-content__text"><?php echo $tab['content'] ?></div>
+									<?php endif ?>
+
+									<?php if ( ! empty( $tab['list'] ) ): ?>
+										<ul class="pc-tab-content__list">
+											<?php foreach ( $tab['list'] as $item ): ?>
+												<li class="pc-tab-content__list-item">
+													<strong><?php echo $item['title'] ?></strong>
+													<span><?php echo $item['value'] ?></span>
+												</li>
+											<?php endforeach ?>
+										</ul>
+									<?php endif ?>
+
+									<?php if ( $tab['bottom_text'] ): ?>
+										<div class=""><?php echo $tab['bottom_text'] ?></div>
+									<?php endif ?>
+								</div>
+							<?php endif ?>
 
 							<?php $j ++; ?>
 						<?php endforeach ?>

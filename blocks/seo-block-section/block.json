@@ -1,0 +1,40 @@
+{
+	"name": "cf/seo-block-section",
+	"title": "Seo Section",
+	"description": "Seo Block",
+	"style": "",
+	"category": "flyingaxes",
+	"icon": "screenoptions",
+	"keywords": ["seo", "text", "booking"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block-render.php"
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"data": {
+				"preview_image_help": "block-image-preview.jpg"
+			}
+		}
+	},
+	"supports": {
+		"align": ["full"],
+		"spacing ": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"],
+			"units": [ "px" ]
+		},
+		"color" : {
+			"background": true,
+			"gradients": true
+		},
+		"anchor": true
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	}
+}

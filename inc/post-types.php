@@ -2,21 +2,22 @@
 /**
  * Registers a new post type
  */
-function pc_register_post_types() {
+
+add_action( 'init', function () {
 
 	$labels = array(
-		'name'                => __( 'Cases', 'text-domain' ),
-		'singular_name'       => __( 'Case', 'text-domain' ),
-		'add_new'             => _x( 'Add New Case', 'text-domain', 'text-domain' ),
-		'add_new_item'        => __( 'Add New Case', 'text-domain' ),
-		'edit_item'           => __( 'Edit Case', 'text-domain' ),
-		'new_item'            => __( 'New Case', 'text-domain' ),
-		'view_item'           => __( 'View Case', 'text-domain' ),
-		'search_items'        => __( 'Search Cases', 'text-domain' ),
-		'not_found'           => __( 'No Cases found', 'text-domain' ),
-		'not_found_in_trash'  => __( 'No Cases found in Trash', 'text-domain' ),
-		'parent_item_colon'   => __( 'Parent Case:', 'text-domain' ),
-		'menu_name'           => __( 'Cases', 'text-domain' ),
+		'name'               => __( 'Events', 'text-domain' ),
+		'singular_name'      => __( 'Event', 'text-domain' ),
+		'add_new'            => _x( 'Add New Event', 'text-domain', 'text-domain' ),
+		'add_new_item'       => __( 'Add New Event', 'text-domain' ),
+		'edit_item'          => __( 'Edit Event', 'text-domain' ),
+		'new_item'           => __( 'New Event', 'text-domain' ),
+		'view_item'          => __( 'View Event', 'text-domain' ),
+		'search_items'       => __( 'Search Events', 'text-domain' ),
+		'not_found'          => __( 'No Events found', 'text-domain' ),
+		'not_found_in_trash' => __( 'No Events found in Trash', 'text-domain' ),
+		'parent_item_colon'  => __( 'Parent Event:', 'text-domain' ),
+		'menu_name'          => __( 'Events', 'text-domain' ),
 	);
 
 	$args = array(
@@ -35,14 +36,31 @@ function pc_register_post_types() {
 		'has_archive'         => false,
 		'can_export'          => true,
 		'capability_type'     => 'post',
-		'rewrite'             => array('slug' => 'cases'),
+		'rewrite'             => array( 'with_front' => false ),
 		'supports'            => array(
-			'title', 'editor', 'author', 'thumbnail','revisions'
+			'title',
+			'editor',
+			'author',
+			'thumbnail',
+			'revisions'
 		)
 	);
 
-	register_post_type( 'bz_case', $args );
+	register_post_type( 'events', $args );
 
-}
-
-//add_action( 'init', 'pc_register_post_types' );
+	register_taxonomy(
+		'category',
+		'events',
+		array(
+			'label'              => __( 'Categories' ),
+//			'rewrite'            => array( 'slug' => 'events' ),
+			'hierarchical'       => true,
+			'show_in_rest'       => true,
+			'show_admin_column'  => true,
+			'show_in_nav_menus'  => false,
+			'publicly_queryable' => true,
+			'public'             => true,
+			'show_in_quick_edit' => true,
+		)
+	);
+} );

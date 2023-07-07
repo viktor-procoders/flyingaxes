@@ -1,0 +1,43 @@
+@import "../variables.scss";
+
+.seo-block-section {
+  position: relative;
+  padding: 50px 0;
+
+  &::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: $white;
+    mix-blend-mode: overlay;
+    background-image: url('../images/sketchgrain.png');
+  }
+
+  @media (min-width: 768px) {
+    padding: 80px 0;
+  }
+
+  &__title {
+    text-align: center;
+    color: $blue;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    margin-top: 0;
+    @media (min-width: 768px) {
+      margin-top: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link {
+    text-align: center;
+    margin-top: 40px;
+  }
+}

@@ -1,0 +1,39 @@
+@import "../variables.scss";
+
+.keywords-slider-section {
+  padding: 60px 0;
+  background-color: #A1B7B6;
+
+  &__links {
+
+    .splide__slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .splide__slide:nth-child(odd) {
+      a {
+        font-family: $headings-font-family-70;
+        font-size: 60px;
+        font-weight: 600;
+      }
+    }
+
+    a {
+      font-family: $headings-font-family-30;
+      font-weight: 300;
+      display: inline-flex;
+      white-space: nowrap;
+      margin: 12px 15px;
+      color: #EBEAEA;
+      font-size: 40px;
+      text-decoration: none;
+
+      &:hover,
+      &:focus {
+        color: $blue;
+      }
+    }
+  }
+}

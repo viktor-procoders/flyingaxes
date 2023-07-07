@@ -38,6 +38,10 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_register_style( 'local-events-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'local-events-section.css' ), null, null );
 	wp_register_style( 'local-league-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'local-league-section.css' ), null, null );
 	wp_register_style( 'gift-posts-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'gift-posts-section.css' ), null, null );
+	wp_register_style( 'seo-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'seo-section.css' ), null, null );
+	wp_register_style( 'keywords-slider-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'keywords-slider-section.css' ), null, null );
+	wp_register_style( 'event-planning-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'event-planning-section.css' ), null, null );
+	wp_register_style( 'safety-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'safety-section.css' ), null, null );
 
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
