@@ -40,7 +40,7 @@ if ( $is_preview ) {
 	'text'             => $text,
 	'event_options'    => $event_options,
 	'subheading'       => $subheading,
-	'link'             => $link,
+	'button'           => $button,
 	'description'      => $description,
 	'background_image' => $bg,
 ] = get_field( 'event_planning_section' );
@@ -90,10 +90,10 @@ if ( $is_preview ) {
 						<?php if ( $subheading ): ?>
 							<h3 class="h5 event-planning-section__subheading"><?php echo $subheading ?></h3>
 						<?php endif ?>
-						<?php if ( ! empty( $link ) ): ?>
-							<a class="pc-button pc-button--red" href="<?php echo $link['url'] ?>">
-								<?php echo $link['title'] ?>
-							</a>
+						<?php if ( $button ): ?>
+							<button class="pc-button pc-button--red" data-lightbox-btn="event-form">
+								<?php echo $button ?>
+							</button>
 						<?php endif ?>
 						<?php if ( $description ): ?>
 							<div class="event-planning-section__description"><?php echo $description ?></div>

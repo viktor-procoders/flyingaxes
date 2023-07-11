@@ -1,4 +1,4 @@
-<?php $booking_link = get_field( 'booking_link', 'options' ) ?>
+<?php $booking_button = get_field( 'booking_button', 'options' ) ?>
 
 <header class="pc-header" data-header>
 	<div class="pc-header__container container">
@@ -55,9 +55,9 @@
 					]
 				);
 				?>
-				<?php if ( $booking_link['url'] ): ?>
-					<a class="pc-button pc-button--outline ms-5" href="<?php echo $booking_link['url'] ?>">
-						<?php echo $booking_link['title'] ?>
+				<?php if ( $booking_button ): ?>
+					<a class="pc-button pc-button--outline ms-5" data-lightbox-btn="booking-form">
+						<?php echo $booking_button ?>
 					</a>
 				<?php endif ?>
 			</nav>

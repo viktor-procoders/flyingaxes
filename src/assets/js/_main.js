@@ -10,6 +10,9 @@ export class Main {
     this.mobileMenu();
     this.stickyHeader();
     this.preloader();
+    this.lightBoxInit();
+    this.thankYouMessage();
+
   }
 
   mobileMenu() {
@@ -55,5 +58,66 @@ export class Main {
       document.querySelector('[data-preloader]').classList.add('loaded');
       this.body.classList.remove('overflow-hidden');
     });
+  }
+
+  lightBoxInit() {
+    const lightBoxButtons = document.querySelectorAll('[data-lightbox-btn]');
+    const lightBoxContent = document.querySelectorAll('[data-lightbox-content]');
+    const closeLightBox = document.querySelectorAll('[data-close-lightbox]');
+
+    function showContent(content) {
+      content.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideContent(content) {
+      content.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    lightBoxButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const btnDataAttr = btn.getAttribute('data-lightbox-btn');
+
+        lightBoxContent.forEach((content) => {
+          const contentDataAttr = content.getAttribute('data-lightbox-content');
+
+          if (btnDataAttr === contentDataAttr) {
+            showContent(content);
+          } else {
+            hideContent(content);
+          }
+        });
+      });
+    });
+
+    closeLightBox.forEach((closeBtn) => {
+      closeBtn.addEventListener('click', () => {
+        document.body.style.overflow = 'auto';
+        const contentBlock = closeBtn.closest('[data-lightbox-content]');
+        if (contentBlock) {
+          hideContent(contentBlock);
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (e.target.matches('.pc-lightbox')) {
+        lightBoxContent.forEach((content) => {
+          hideContent(content);
+        });
+      }
+    });
+  }
+
+  thankYouMessage() {
+    const showThankYou = (event) => {
+      let formId = event.detail.unitTag;
+      if (!formId) return;
+
+      let message = document.querySelector('[data-message]');
+      message.classList.add('form-sent');
+    }
+    document.addEventListener('wpcf7mailsent', showThankYou);
   }
 }

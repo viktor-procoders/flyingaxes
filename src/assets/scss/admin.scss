@@ -1,6 +1,14 @@
 
 .wp-block-post-content {
-  @import "app.scss";
+  @import "variables.scss";
+  @import "lib/bootstrap-reboot.scss";
+  @import "lib/bootstrap-grid.scss";
+
+  //components
+  @import "components/button.scss";
+  @import "components/_typography.scss";
+  @import "main.scss";
+
   @import "blocks/intro-section.scss";
   @import "blocks/experience-section.scss";
   @import "blocks/cta-section.scss";

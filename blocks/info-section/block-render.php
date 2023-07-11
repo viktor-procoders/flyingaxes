@@ -36,9 +36,9 @@ if ( $is_preview ) {
 }
 
 [
-	'text' => $text,
-	'link' => $link,
-	'tabs' => $tabs,
+	'text'   => $text,
+	'button' => $button,
+	'tabs'   => $tabs,
 ] = get_field( 'info_section' );
 ?>
 
@@ -55,10 +55,10 @@ if ( $is_preview ) {
 					<?php if ( $text ): ?>
 						<div class="mb-4"><?php echo $text ?></div>
 					<?php endif ?>
-					<?php if ( ! empty( $link ) ): ?>
-						<a class="pc-button pc-button--outline" href="<?php echo $link['url'] ?>">
-							<?php echo $link['title'] ?>
-						</a>
+					<?php if ( $button ): ?>
+						<button class="pc-button pc-button--outline" data-lightbox-btn="booking-form">
+							<?php echo $button ?>
+						</button>
 					<?php endif ?>
 				</div>
 				<div class="col-lg-5 offset-lg-1">

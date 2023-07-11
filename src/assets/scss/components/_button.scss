@@ -9,6 +9,7 @@
   font-family: $body-font-family;
   border-radius: 20px;
   background-color: $blue;
+  cursor: pointer;
   color: $white;
   min-width: 180px;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
@@ -20,6 +21,7 @@
 
   &--red {
     background-color: $red;
+    border: none;
 
     &:hover, &:focus {
       color: $white;

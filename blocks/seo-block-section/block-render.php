@@ -38,7 +38,7 @@ if ( $is_preview ) {
 	'title'        => $title,
 	'left_column'  => $left_column,
 	'right_column' => $right_column,
-	'link'         => $link,
+	'button'       => $button,
 ] = get_field( 'seo_section' );
 ?>
 
@@ -65,9 +65,11 @@ if ( $is_preview ) {
 					<?php endif ?>
 				</div>
 			</div>
-			<?php if ( ! empty( $link ) ): ?>
-				<div class="seo-block-section__link">
-					<a class="pc-button pc-button--red" href="<?php echo $link['url'] ?>"><?php echo $link['title'] ?></a>
+			<?php if ( $button ): ?>
+				<div class="text-center">
+					<button class="pc-button pc-button--red seo-block-section__link" data-lightbox-btn="booking-form">
+						<?php echo $button ?>
+					</button>
 				</div>
 			<?php endif ?>
 		</div>

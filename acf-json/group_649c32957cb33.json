@@ -40,10 +40,10 @@
                 },
                 {
                     "key": "field_649c345ff7e3e",
-                    "label": "Link",
-                    "name": "link",
+                    "label": "Button",
+                    "name": "button",
                     "aria-label": "",
-                    "type": "link",
+                    "type": "text",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -52,7 +52,11 @@
                         "class": "",
                         "id": ""
                     },
-                    "return_format": "array"
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
                 },
                 {
                     "key": "field_649c3d71f7e3f",
@@ -281,5 +285,5 @@
     "active": true,
     "description": "Gutenberg",
     "show_in_rest": 0,
-    "modified": 1688717099
+    "modified": 1689084786
 }

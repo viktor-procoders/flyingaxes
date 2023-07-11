@@ -39,3 +39,28 @@ require_once( 'inc/TopBarWalker.php' );
 
 /**Editor customizations*/
 require_once( 'inc/tiny_mce.php' );
+
+
+add_shortcode( 'image_separator', function () {
+
+	ob_start(); ?>
+	<div class="pc-target-decor">
+		<?php
+		if ( function_exists( 'starsDisplay' ) ) {
+			starsDisplay( 2 );
+		}
+		?>
+		<img loading="lazy" width="60" height="60"
+		     src="<?php echo get_template_directory_uri() . '/dist/assets/images/target.png' ?>"
+		     alt="target image">
+		<?php
+		if ( function_exists( 'starsDisplay' ) ) {
+			starsDisplay( 2 );
+		} ?>
+	</div>
+	<?php
+	$output = ob_get_clean();
+
+	return $output;
+} );
+

@@ -9,9 +9,12 @@
  * @package flyingaxes
  */
 
+
 ?>
 
-<?php get_template_part('template-parts/footer') ?>
+<?php get_template_part( 'template-parts/footer' ) ?>
+<?php get_template_part( 'template-parts/event-forms' ) ?>
+<?php get_template_part( 'template-parts/booking-form' ) ?>
 
 <?php wp_footer(); ?>
 

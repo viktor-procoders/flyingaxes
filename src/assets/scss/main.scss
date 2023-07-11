@@ -32,6 +32,10 @@ strong {
   font-weight: bold;
 }
 
+button {
+  cursor: pointer;
+}
+
 body {
   background-color: $light-gray;
   line-height: 1.5;
@@ -78,6 +82,10 @@ a {
   color: $light-blue;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .pc-main {
   figure.wp-block-gallery {
     gap: 4px;
@@ -105,5 +113,135 @@ a {
     visibility: hidden;
     pointer-events: none;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+}
+
+.pc-lightbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba($black, .5);
+  z-index: 99;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+
+  &__title {
+    color: $blue;
+    padding-bottom: 30px;
+    border-bottom: 1px solid currentColor;
+    margin-bottom: 30px;
+  }
+
+  &__booking-cta {
+    padding: 30px;
+    border-radius: 20px;
+    border: 0.5px dashed rgba($black, 0.5);
+    background-color: rgba($white, 0.5);
+    box-shadow: 0 4px 11px 0 rgba($black, 0.05);
+    margin-bottom: 20px;
+  }
+
+  &__inner {
+    position: relative;
+    padding: 20px;
+    background-color: $white;
+    max-height: 95vh;
+    max-width: 95vw;
+    width: 100%;
+    overflow-y: auto;
+    min-height: 700px;
+
+    @media (min-width: 768px) {
+      max-height: 90vh;
+      max-width: 80vw;
+      padding: 50px;
+    }
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba($blue, 1);
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+      background: rgba($blue, 0.8);
+      transition: background 0.3s;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    z-index: 10;
+    transition: opacity .3s ease-in-out;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity .3s ease-in-out, visibility .3s ease-in-out;
+  }
+}
+
+.pc-target-decor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 35px 0;
+
+  > img {
+    margin: 0 16px;
+  }
+
+  > svg {
+    flex-shrink: 0;
+    margin: 0 4px;
+  }
+
+  &:before, &::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    max-width: 140px;
+    background-color: #ABABAB;
+  }
+
+  &::before {
+    margin-right: 16px;
+  }
+
+  &::after {
+    margin-left: 16px;
+  }
+}
+
+.pc-iframe {
+  &--booking {
+    min-height: 650px;
   }
 }
