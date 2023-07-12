@@ -70,7 +70,7 @@ $intro_section = get_field( 'intro_slider' );
 
 								<img class=""
 								     loading="lazy"
-								     src="<?php echo $slide['mobile_image']['url'] ?>"
+								     src="<?php echo $slide['mobile_image']['url'] ?: $slide['image']['url'] ?>"
 								     alt="<?php echo $slide['image']['alt'] ?>">
 							</picture>
 						</div>
