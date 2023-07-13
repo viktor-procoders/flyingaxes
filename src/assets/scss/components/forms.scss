@@ -1,0 +1,108 @@
+[type='text']:not(.acf-field),
+[type='password'],
+[type='date'],
+[type='datetime'],
+[type='datetime-local'],
+[type='month'],
+[type='week'],
+[type='email'],
+[type='number'],
+[type='search'],
+[type='tel'],
+[type='time'],
+[type='url'],
+[type='color'],
+textarea:not(.wp-editor-area), select {
+  display: block;
+  box-shadow: none;
+  line-height: 1.5;
+  letter-spacing: 0.15px;
+  font-size: 16px;
+  color: $black;
+  appearance: none;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  border: 0.5px solid #BDBDBD;
+  background-color: rgba(242, 242, 242, 0.40);
+  margin-bottom: 20px;
+}
+
+select {
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: 100% 50%;
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_989_276)'%3E%3Cpath d='M15.8805 9.29055L12.0005 13.1705L8.12047 9.29055C7.73047 8.90055 7.10047 8.90055 6.71047 9.29055C6.32047 9.68055 6.32047 10.3105 6.71047 10.7005L11.3005 15.2905C11.6905 15.6805 12.3205 15.6805 12.7105 15.2905L17.3005 10.7005C17.6905 10.3105 17.6905 9.68055 17.3005 9.29055C16.9105 8.91055 16.2705 8.90055 15.8805 9.29055V9.29055Z' fill='%23BDBDBD'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_989_276'%3E%3Crect width='24' height='24' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+textarea {
+  resize: none;
+  //height: 40px!important;
+  max-height: 40px;
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
+  position: relative;
+}
+
+.wpcf7-not-valid-tip {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  font-size: 14px;
+}
+
+.wpcf7-form {
+
+  h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: $body-font-family;
+    margin-bottom: 20px;
+  }
+
+  label {
+    display: inline-block;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.25px;
+    color: #828282;
+    margin-bottom: 8px;
+  }
+
+  .pc-button {
+    margin-top: 45px;
+  }
+
+  &.sent {
+    display: none;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    @media (min-width: 998px) {
+      margin-top: 0;
+      max-width: 53%;
+    }
+  }
+}
+
+.form-info {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 300;
+}
+
+.thank-you-message {
+  display: none;
+
+  &.form-sent {
+    display: block;
+  }
+}

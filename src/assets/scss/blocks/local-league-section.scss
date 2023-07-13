@@ -27,11 +27,16 @@
     transform: translateY(-50%);
     z-index: -1;
 
-    @media (min-width: 1200px) {
+    @media (min-width: 1300px) {
       display: block;
       max-width: 240px;
     }
     @media (min-width: 1400px) {
+      display: block;
+      max-width: 320px;
+    }
+
+    @media (min-width: 1500px) {
       display: block;
       max-width: none;
     }
