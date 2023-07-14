@@ -1,0 +1,51 @@
+@import "../variables.scss";
+
+.how-to-play-section {
+  padding: 60px 0;
+  background-color: #fff;
+
+  &__title {
+    font-family: $prohibition;
+    color: $blue;
+  }
+
+  &__text {
+    color: $blue;
+  }
+
+  &__points {
+    margin-top: 45px;
+  }
+
+  &__point {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 1px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    line-height: 1;
+  }
+
+  &__placement {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+
+    &--1 {
+      color: $blue;
+    }
+
+    &--2 {
+      color: #D59141;
+    }
+
+    &--3 {
+      color: #EB1F30;
+    }
+
+    &--4 {
+      color: #EB1F30;
+    }
+  }
+}

@@ -9,15 +9,15 @@
  */
 
 // Create id attribute allowing for custom "anchor" value.
-$id = 'seo-block-section-' . $block['id'];
+$id = 'intro-booking-section-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) {
 	$id = $block['anchor'];
 }
 
-wp_enqueue_style( 'seo-section' );
+wp_enqueue_style( 'intro-booking-section' );
 
 // Create class attribute allowing for custom "className" and "align" values.
-$classes = 'seo-block-section';
+$classes = 'intro-booking-section';
 if ( ! empty( $block['className'] ) ) {
 	$classes .= ' ' . $block['className'];
 }
@@ -34,15 +34,15 @@ if ( $is_preview ) {
 	$wrapper_attributes = '';
 }
 
+
 [
-	'view'         => $view,
-	'title'        => $title,
-	'subtitle'     => $subtitle,
-	'left_column'  => $left_column,
-	'right_column' => $right_column,
+	'title_top'    => $title_top,
+	'title_bottom' => $title_bottom,
+	'image'        => $image,
 	'button'       => $button,
-] = get_field( 'seo_section' );
+] = get_field( 'intro_booking_section' );
 ?>
+
 
 <?php if ( isset( $block['data']['preview_image_help'] ) ): ?>
 	<?php
@@ -50,32 +50,16 @@ if ( $is_preview ) {
 	echo '<img src="' . get_stylesheet_directory_uri() . $fileUrl . '/' . $block['data']['preview_image_help'] . '" style="width:100%; height:auto;">';
 	?>
 <?php else: ?>
-	<section class="seo-block-section seo-block-section--<?php echo $view ?>" id="<?php echo esc_attr( $id ); ?>" <?php echo $wrapper_attributes; ?>>
-		<div class="container">
-			<?php if ( $title ): ?>
-				<h2 class="seo-block-section__title h3"><?php echo $title ?></h2>
+	<section class="intro-booking-section" id="<?php echo esc_attr( $id ); ?>" <?php echo $wrapper_attributes; ?>>
+		<div class="intro-booking-section__top text-center" <?php bg( $image ) ?>>
+			<?php if ( $title_top && $title_bottom ): ?>
+				<h2 class="intro-booking-section__title">
+					<span><?php echo $title_top ?></span>
+					<span><?php echo $title_bottom ?></span>
+				</h2>
 			<?php endif ?>
-			<?php if ( $subtitle ): ?>
-				<p class="text-center seo-block-section__subtitle"><?php echo $subtitle ?></p>
-			<?php endif ?>
-			<div class="row justify-content-between">
-				<div class="col-md-6">
-					<?php if ( $left_column ): ?>
-						<div class="seo-block-section__text"><?php echo $left_column ?></div>
-					<?php endif ?>
-				</div>
-				<div class="col-md-6">
-					<?php if ( $right_column ): ?>
-						<div class="seo-block-section__text"><?php echo $right_column ?></div>
-					<?php endif ?>
-				</div>
-			</div>
 			<?php if ( $button ): ?>
-				<div class="text-center">
-					<button class="pc-button pc-button--red seo-block-section__link" data-lightbox-btn="booking-form">
-						<?php echo $button ?>
-					</button>
-				</div>
+				<button data-lightbox-btn="booking-form" class="intro-booking-section__button pc-button pc-button--red"><?php echo $button ?></button>
 			<?php endif ?>
 		</div>
 	</section>

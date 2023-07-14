@@ -24,7 +24,7 @@ endif;
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'app.css' ), array(), null );
-	wp_enqueue_style('glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', '', '1.0.0', 'all');
+	wp_enqueue_style( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', '', '1.0.0', 'all' );
 
 	// register g-blocks styles
 	wp_register_style( 'intro-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'intro-section.css' ), null, null );
@@ -43,6 +43,8 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_register_style( 'keywords-slider-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'keywords-slider-section.css' ), null, null );
 	wp_register_style( 'event-planning-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'event-planning-section.css' ), null, null );
 	wp_register_style( 'safety-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'safety-section.css' ), null, null );
+	wp_register_style( 'intro-booking-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'intro-booking-section.css' ), null, null );
+	wp_register_style( 'how-to-play-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'how-to-play-section.css' ), null, null );
 
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );

@@ -54,9 +54,9 @@ if ( $is_preview ) {
 				<div class="cta-card cta-card--blue">
 					<?php if ( $left_column['title'] ): ?>
 						<p class="cta-card__title h5">
-							<?php starsDisplay(2); ?>
+							<?php starsDisplay( 2 ); ?>
 							<span><?php echo $left_column['title'] ?></span>
-							<?php starsDisplay(2); ?>
+							<?php starsDisplay( 2 ); ?>
 						</p>
 					<?php endif ?>
 					<?php if ( ! empty( $left_column['image'] ) ): ?>
@@ -78,13 +78,18 @@ if ( $is_preview ) {
 							<?php echo $left_column['link']['title'] ?>
 						</a>
 					<?php endif ?>
+					<?php if ( $left_column['button'] ): ?>
+						<button class="pc-button cta-card__link pc-button--red" data-lightbox-btn="<?php echo $left_column['button_type'] ?>">
+							<?php echo $left_column['button'] ?>
+						</button>
+					<?php endif ?>
 				</div>
 				<div class="cta-card cta-card--red">
 					<?php if ( $right_column['title'] ): ?>
 						<p class="cta-card__title h5">
-							<?php starsDisplay(2); ?>
+							<?php starsDisplay( 2 ); ?>
 							<span><?php echo $right_column['title'] ?></span>
-							<?php starsDisplay(2); ?>
+							<?php starsDisplay( 2 ); ?>
 						</p>
 					<?php endif ?>
 					<?php if ( ! empty( $right_column['image'] ) ): ?>
@@ -105,6 +110,11 @@ if ( $is_preview ) {
 						   href="<?php echo $right_column['link']['url'] ?>">
 							<?php echo $right_column['link']['title'] ?>
 						</a>
+					<?php endif ?>
+					<?php if ( $right_column['button'] ): ?>
+						<button class="pc-button cta-card__link" data-lightbox-btn="<?php echo $right_column['button_type'] ?>">
+							<?php echo $right_column['button'] ?>
+						</button>
 					<?php endif ?>
 				</div>
 			</div>

@@ -12,6 +12,7 @@
   cursor: pointer;
   color: $white;
   min-width: 180px;
+  border: none;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
   &:hover, &:focus {

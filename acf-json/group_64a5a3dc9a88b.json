@@ -19,9 +19,56 @@
             "layout": "block",
             "sub_fields": [
                 {
+                    "key": "field_64b15e44e7ec4",
+                    "label": "View",
+                    "name": "view",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "wood": "Light wood Background",
+                        "blue": "Blue Background",
+                        "gray": "Gray Background"
+                    },
+                    "default_value": "wood",
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
                     "key": "field_64a5a4409c57f",
                     "label": "Title",
                     "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_64b15f6b2a215",
+                    "label": "Subtitle",
+                    "name": "subtitle",
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
@@ -119,5 +166,5 @@
     "active": true,
     "description": "Gutenberg",
     "show_in_rest": 0,
-    "modified": 1689085561
+    "modified": 1689345918
 }
