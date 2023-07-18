@@ -1,0 +1,40 @@
+{
+	"name": "cf/newsletter-section",
+	"title": "Newsletter Section",
+	"description": "Join the newsletter section",
+	"style": "",
+	"category": "flyingaxes",
+	"icon": "screenoptions",
+	"keywords": ["safety", "coach", "rules"],
+	"acf": {
+		"mode": "preview",
+		"renderTemplate": "block-render.php"
+	},
+	"example": {
+		"attributes": {
+			"preview": true,
+			"data": {
+				"preview_image_help": "block-image-preview.jpg"
+			}
+		}
+	},
+	"supports": {
+		"align": ["full"],
+		"spacing ": {
+			"margin": ["top", "bottom"],
+			"padding": ["top", "bottom"],
+			"units": [ "px" ]
+		},
+		"color" : {
+			"background": true,
+			"gradients": true
+		},
+		"anchor": true
+	},
+	"attributes": {
+		"align": {
+			"type": "string",
+			"default": "full"
+		}
+	}
+}

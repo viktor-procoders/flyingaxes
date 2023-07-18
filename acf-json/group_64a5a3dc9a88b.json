@@ -35,7 +35,8 @@
                     "choices": {
                         "wood": "Light wood Background",
                         "blue": "Blue Background",
-                        "gray": "Gray Background"
+                        "gray": "Gray Background",
+                        "white": "White Background"
                     },
                     "default_value": "wood",
                     "return_format": "value",
@@ -166,5 +167,5 @@
     "active": true,
     "description": "Gutenberg",
     "show_in_rest": 0,
-    "modified": 1689345918
+    "modified": 1689698774
 }

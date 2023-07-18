@@ -45,6 +45,9 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_register_style( 'safety-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'safety-section.css' ), null, null );
 	wp_register_style( 'intro-booking-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'intro-booking-section.css' ), null, null );
 	wp_register_style( 'how-to-play-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'how-to-play-section.css' ), null, null );
+	wp_register_style( 'join-league-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'join-league-section.css' ), null, null );
+	wp_register_style( 'schedule-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'schedule-section.css' ), null, null );
+	wp_register_style( 'newsletter-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'newsletter-section.css' ), null, null );
 
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );

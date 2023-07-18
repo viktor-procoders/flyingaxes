@@ -1,0 +1,49 @@
+@import '../variables.scss';
+
+.newsletter-section {
+  position: relative;
+  overflow: hidden;
+  padding: 0 0 50px 0;
+  background-color: $light-gray;
+
+  @media (min-width: 998px) {
+    padding: 80px 0;
+  }
+
+  &__title {
+    color: $blue;
+    font-family: $prohibition;
+    margin-bottom: 30px;
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &__img {
+    mix-blend-mode: color-burn;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+
+  &__picture {
+    display: block;
+    width: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    mix-blend-mode: color-burn;
+    height: 500px;
+
+    @media (min-width: 998px) {
+      margin-right: 52%;
+      width: 48%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      height: 100%;
+    }
+  }
+}

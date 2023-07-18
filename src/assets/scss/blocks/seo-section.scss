@@ -4,6 +4,14 @@
   position: relative;
   padding: 50px 0;
 
+  &--white {
+    background-color: $white;
+
+    &::before {
+      content: none;
+    }
+  }
+
   &--blue {
     background-color: $blue;
     color: $white;
