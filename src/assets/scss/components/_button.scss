@@ -29,18 +29,22 @@
       background-color: $blue;
     }
   }
+
   &--outline {
     background-color: transparent;
     border: 2px solid $blue;
     border-radius: 10px;
     padding: 8px 18px;
     font-weight: 600;
-    min-width: 125px;
     color: $blue;
 
     &:hover, &:focus {
       color: $white;
       background-color: $blue;
     }
+  }
+
+  &--small {
+    min-width: 125px;
   }
 }

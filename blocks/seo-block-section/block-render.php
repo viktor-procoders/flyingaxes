@@ -35,47 +35,80 @@ if ( $is_preview ) {
 }
 
 [
-	'view'         => $view,
-	'title'        => $title,
-	'subtitle'     => $subtitle,
-	'left_column'  => $left_column,
-	'right_column' => $right_column,
-	'button'       => $button,
+	'background_color' => $bg_color,
+	'wood_pattern'     => $wood_pattern,
+	'title'            => $title,
+	'subtitle'         => $subtitle,
+	'columns'          => $columns,
+	'left_column'      => $left_column,
+	'right_column'     => $right_column,
+	'text'             => $text,
+	'type'             => $type,
+	'button_style'     => $button_style,
+	'button_text'      => $button_text,
+	'button_type'      => $button_type,
+	'link'             => $link,
+	'notice'           => $notice,
 ] = get_field( 'seo_section' );
 ?>
 
 <?php if ( isset( $block['data']['preview_image_help'] ) ): ?>
 	<?php
-	$fileUrl = str_replace( get_stylesheet_directory(), '', dirname( __FILE__ ), );
+	$fileUrl = str_replace( get_stylesheet_directory(), '', dirname( __FILE__ ) );
 	echo '<img src="' . get_stylesheet_directory_uri() . $fileUrl . '/' . $block['data']['preview_image_help'] . '" style="width:100%; height:auto;">';
 	?>
 <?php else: ?>
-	<section class="seo-block-section seo-block-section--<?php echo $view ?>" id="<?php echo esc_attr( $id ); ?>" <?php echo $wrapper_attributes; ?>>
+	<section
+		class="seo-block-section seo-block-section--<?php echo $bg_color ?> <?php echo $wood_pattern ? 'seo-block-section--pattern' : null ?>"
+		id="<?php echo esc_attr( $id ); ?>"
+		<?php echo $wrapper_attributes; ?>>
 		<div class="container">
 			<?php if ( $title ): ?>
-				<h2 class="seo-block-section__title h3"><?php echo $title ?></h2>
+				<h2 class="seo-block-section__title"><?php echo $title ?></h2>
 			<?php endif ?>
 			<?php if ( $subtitle ): ?>
 				<p class="text-center seo-block-section__subtitle"><?php echo $subtitle ?></p>
 			<?php endif ?>
-			<div class="row justify-content-between">
-				<div class="col-md-6">
-					<?php if ( $left_column ): ?>
-						<div class="seo-block-section__text"><?php echo $left_column ?></div>
+			<div class="row justify-content-center">
+				<?php if ( $columns === 'two' ): ?>
+					<div class="col-md-6">
+						<?php if ( $left_column ): ?>
+							<div class="seo-block-section__text"><?php echo $left_column ?></div>
+						<?php endif ?>
+					</div>
+					<div class="col-md-6">
+						<?php if ( $right_column ): ?>
+							<div class="seo-block-section__text"><?php echo $right_column ?></div>
+						<?php endif ?>
+					</div>
+				<?php else : ?>
+					<?php if ( $text ): ?>
+						<div class="col-md-7">
+							<div class="text-center"><?php echo $text ?></div>
+						</div>
 					<?php endif ?>
-				</div>
-				<div class="col-md-6">
-					<?php if ( $right_column ): ?>
-						<div class="seo-block-section__text"><?php echo $right_column ?></div>
-					<?php endif ?>
-				</div>
+				<?php endif ?>
 			</div>
-			<?php if ( $button ): ?>
+			<?php if ( $type === 'button' && $button_text ): ?>
 				<div class="text-center">
-					<button class="pc-button pc-button--red seo-block-section__link" data-lightbox-btn="booking-form">
-						<?php echo $button ?>
+					<button class="pc-button <?php echo $button_style ?> seo-block-section__link" data-lightbox-btn="<?php echo $button_type ?>">
+						<?php echo $button_text ?>
 					</button>
 				</div>
+			<?php else : ?>
+				<?php if ( ! empty( $link ) ): ?>
+					<div class="text-center">
+						<a class="pc-button <?php echo $button_style ?> seo-block-section__link"
+						   href="<?php echo $link['url'] ?>" target="<?php echo $link['target'] ?>">
+							<?php echo $link['title'] ?>
+						</a>
+					</div>
+				<?php endif ?>
+			<?php endif ?>
+			<?php if ( $notice ): ?>
+				<p class="text-center seo-block-section__notice">
+					<i><?php echo $notice ?></i>
+				</p>
 			<?php endif ?>
 		</div>
 	</section>

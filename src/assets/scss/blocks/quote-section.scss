@@ -1,6 +1,21 @@
 @import "../variables.scss";
 @import "../lib/splide.scss";
 
+.stars-rating {
+  --percent: calc(var(--rating) / 5 * 100%);
+  display: inline-block;
+  font-size: 20px;
+  line-height: 1;
+
+  &::before {
+    content: '⭐⭐⭐⭐⭐';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, #FCD503 var(--percent), $dark-gray var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
 .quote-section {
   background-color: $blue;
   color: $white;

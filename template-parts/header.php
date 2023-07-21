@@ -56,7 +56,7 @@
 				);
 				?>
 				<?php if ( $booking_button ): ?>
-					<a class="pc-button pc-button--outline ms-5" data-lightbox-btn="booking-form">
+					<a class="pc-button pc-button--outline pc-button--small ms-5" data-lightbox-btn="booking-form">
 						<?php echo $booking_button ?>
 					</a>
 				<?php endif ?>
