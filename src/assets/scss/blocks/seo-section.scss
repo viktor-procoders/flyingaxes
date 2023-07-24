@@ -22,7 +22,7 @@
   }
 
   &--white {
-    background-color: $white;
+    background-color: rgba($white, 0.8);
   }
 
   &--blue {
@@ -61,7 +61,7 @@
     margin-bottom: 30px;
 
     @media (min-width: 998px) {
-      max-width: 45%;
+      max-width: 30%;
     }
   }
 

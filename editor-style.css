@@ -1,6 +1,58 @@
 .text-blue {
   color: #1C4772;
 }
+
 .text-red {
   color: #BD3839;
+}
+
+h1, .h1 {
+  font-size: 52px;
+  font-family: "Knockout 70 Full Welterwt", sans-serif;
+}
+
+@media (min-width: 768px) {
+  h1, .h1 {
+    font-size: 80px;
+  }
+}
+
+h2, .h2 {
+  font-size: 45px;
+  font-family: "Prohibition", sans-serif;
+}
+
+@media (min-width: 768px) {
+  h2, .h2 {
+    font-size: 60px;
+  }
+}
+
+h3, .h3 {
+  font-size: 35px;
+  font-family: "Prohibition", sans-serif;
+}
+
+@media (min-width: 768px) {
+  h3, .h3 {
+    font-size: 50px;
+  }
+}
+
+h4, .h4 {
+  font-size: 50px;
+  font-family: "Knockout 70 Full Welterwt", sans-serif;
+}
+
+h5, .h5 {
+  font-size: 30px;
+  font-family: "Knockout 30 Junior Welterwt", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .subtitle {
+    font-size: 24px;
+    line-height: 1.7;
+    color: #000000;
+  }
 }

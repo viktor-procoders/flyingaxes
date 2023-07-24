@@ -111,6 +111,11 @@ add_filter( 'tiny_mce_before_init', function ( $init ) {
 						'selector' => 'p,h1,h2,h3,h4,h5,h6',
 						'classes'  => 'h6',
 					],
+					[
+						'title'    => 'Subtitle',
+						'selector' => 'p,h1,h2,h3,h4,h5,h6',
+						'classes'  => 'subtitle',
+					],
 				]
 			],
 			[
