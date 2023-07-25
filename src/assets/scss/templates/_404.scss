@@ -1,0 +1,53 @@
+@import "../blocks/cta-section.scss";
+
+.not-found-intro {
+  padding: 90px 0;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-family: $prohibition;
+    color: $white;
+    font-size: 30px;
+
+    > span {
+      &:first-child {
+        font-size: 40px;
+        color: $yellow;
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__img {
+    margin-top: 40px;
+  }
+}
+
+.not-found-gallery {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    @media (min-width: 798px) {
+      flex-direction: row;
+    }
+
+    picture {
+      flex-basis: 33.333%;
+      flex-shrink: 0;
+    }
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

@@ -62,21 +62,53 @@ $intro_section = get_field( 'intro_slider' );
 			<div class="splide__track">
 				<div class="splide__list">
 					<?php foreach ( $intro_section as $slide ): ?>
-						<div class="splide__slide">
-							<picture class="d-block" style="text-align: center">
-								<source
-									srcset="<?php echo $slide['image']['url'] ?>"
-									media="(min-width: 1024px)">
 
-								<img class=""
-								     loading="lazy"
-								     src="<?php echo $slide['mobile_image']['url'] ?: $slide['image']['url'] ?>"
-								     alt="<?php echo $slide['image']['alt'] ?>">
-							</picture>
-						</div>
+						<?php if ( $slide['banner_type'] === 'link' && ! empty( $slide['link'] ) ): ?>
+							<div class="splide__slide">
+								<a href="<?php echo $slide['link']['url'] ?>"
+								   target="<?php echo $slide['link']['target'] ?>"
+								   class="d-block"
+								   style="text-align: center"
+								   aria-label="<?php echo $slide['link']['title'] ?>">
+									<picture class="d-block" style="text-align: center">
+										<source
+											srcset="<?php echo $slide['image']['url'] ?>"
+											media="(min-width: 1024px)">
+
+										<img class=""
+										     loading="lazy"
+										     src="<?php echo $slide['mobile_image']['url'] ?: $slide['image']['url'] ?>"
+										     alt="<?php echo $slide['image']['alt'] ?>">
+									</picture>
+								</a>
+							</div>
+						<?php endif ?>
+
+						<?php if ( $slide['banner_type'] === 'button' ): ?>
+							<div class="splide__slide">
+								<button
+									class="d-block btn p-0"
+									style="border: none"
+									data-lightbox-btn="<?php echo $slide['button'] ?>"
+									aria-label="Show light box">
+									<picture class="d-block" style="text-align: center">
+										<source
+											srcset="<?php echo $slide['image']['url'] ?>"
+											media="(min-width: 1024px)">
+
+										<img class=""
+										     loading="lazy"
+										     src="<?php echo $slide['mobile_image']['url'] ?: $slide['image']['url'] ?>"
+										     alt="<?php echo $slide['image']['alt'] ?>">
+									</picture>
+								</button>
+							</div>
+						<?php endif ?>
+
 					<?php endforeach ?>
 				</div>
 			</div>
 		</div>
+
 	</section>
 <?php endif; ?>

@@ -19,6 +19,7 @@
   @import "blocks/quote-section.scss";
   @import "blocks/local-events-section.scss";
   @import "blocks/local-league-section.scss";
+  @import "blocks/brewery-selection-section.scss";
   @import "blocks/gift-posts-section.scss";
   @import "blocks/seo-section.scss";
   @import "blocks/keywords-slider-section.scss";
@@ -43,7 +44,14 @@
 
   .splide {
     visibility: visible;
-    flex-shrink: 1;
+  }
+
+  .splide__slide:not(:first-child) {
+    display: none;
+  }
+
+  .splide__slide:first-child {
+    flex-shrink: 1 !important;
   }
 }
 

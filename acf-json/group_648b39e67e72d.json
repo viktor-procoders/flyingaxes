@@ -77,6 +77,30 @@
                     "parent_repeater": "field_648b39e7098b5"
                 },
                 {
+                    "key": "field_64bfcb4302102",
+                    "label": "Banner type",
+                    "name": "banner_type",
+                    "aria-label": "",
+                    "type": "button_group",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "link": "Link",
+                        "button": "Button"
+                    },
+                    "default_value": "link : Link",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "layout": "horizontal",
+                    "parent_repeater": "field_648b39e7098b5"
+                },
+                {
                     "key": "field_6493525b53a88",
                     "label": "Link",
                     "name": "link",
@@ -84,13 +108,56 @@
                     "type": "link",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_64bfcb4302102",
+                                "operator": "==",
+                                "value": "link"
+                            }
+                        ]
+                    ],
                     "wrapper": {
-                        "width": "33",
+                        "width": "",
                         "class": "",
                         "id": ""
                     },
                     "return_format": "array",
+                    "parent_repeater": "field_648b39e7098b5"
+                },
+                {
+                    "key": "field_64bfcba702103",
+                    "label": "Button",
+                    "name": "button",
+                    "aria-label": "",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_64bfcb4302102",
+                                "operator": "==",
+                                "value": "button"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "booking-form": "Booking Form",
+                        "event-form": "Event Form"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 0,
+                    "ui": 0,
+                    "ajax": 0,
+                    "placeholder": "",
                     "parent_repeater": "field_648b39e7098b5"
                 }
             ]
@@ -114,5 +181,5 @@
     "active": true,
     "description": "Gutenberg",
     "show_in_rest": 0,
-    "modified": 1687444961
+    "modified": 1690291203
 }

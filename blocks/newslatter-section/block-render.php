@@ -68,6 +68,9 @@ if ( $is_preview ) {
 					<?php endif ?>
 					<?php if ( $form ): ?>
 						<?php echo $form ?>
+						<div class="text-center thank-you-message" data-message>
+							<p>Thank you for signing up for our newsletter.</p>
+						</div>
 					<?php endif ?>
 				</div>
 			</div>

@@ -64,3 +64,11 @@ add_shortcode( 'image_separator', function () {
 	return $output;
 } );
 
+
+add_filter( 'nav_menu_link_attributes', function ( $atts, $item ) {
+	if ( in_array( 'pc-book-now', $item->classes ) ) {
+		$atts['data-lightbox-btn'] = 'booking-form';
+	}
+
+	return $atts;
+}, 10, 4 );

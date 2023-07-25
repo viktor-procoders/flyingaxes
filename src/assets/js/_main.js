@@ -12,7 +12,7 @@ export class Main {
     this.preloader();
     this.lightBoxInit();
     this.thankYouMessage();
-
+    this.emptyLinkScrollPrevent();
   }
 
   mobileMenu() {
@@ -119,5 +119,10 @@ export class Main {
       message.classList.add('form-sent');
     }
     document.addEventListener('wpcf7mailsent', showThankYou);
+  }
+
+  emptyLinkScrollPrevent() {
+    const links = [...document.querySelectorAll('a[href="#"]')];
+    links.map(link => link.addEventListener('click', (e) => e.preventDefault()));
   }
 }
