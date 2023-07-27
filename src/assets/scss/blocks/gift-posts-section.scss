@@ -62,7 +62,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 45px 0;
+  padding: 45px 16px;
   width: 100%;
   color: $white;
 
@@ -107,6 +107,7 @@
 
     &--blog {
       font-size: 40px;
+      text-align: center;
     }
   }
 

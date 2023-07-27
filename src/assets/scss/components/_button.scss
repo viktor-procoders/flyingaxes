@@ -14,6 +14,10 @@
   min-width: 180px;
   border: none;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  @supports (-webkit-hyphens:none) {
+    padding: 19px 32px 16px 32px;
+  }
+
 
   &:hover, &:focus {
     color: $white;
@@ -37,6 +41,9 @@
     padding: 8px 18px;
     font-weight: 600;
     color: $blue;
+    @supports (-webkit-hyphens:none) {
+      padding: 11px 18px 8px 18px;
+    }
 
     &:hover, &:focus {
       color: $white;
@@ -46,5 +53,9 @@
 
   &--small {
     min-width: 125px;
+  }
+
+  &[disabled] {
+    cursor: not-allowed;
   }
 }

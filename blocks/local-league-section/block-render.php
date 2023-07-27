@@ -52,7 +52,7 @@ if ( $is_preview ) {
 	<section class="local-league-section" id="<?php echo esc_attr( $id ); ?>" <?php bg( $bg ) ?> <?php echo $wrapper_attributes; ?>>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-4 d-flex flex-column align-items-center mb-lg-0 mb-5">
+				<div class="col-lg-3 d-flex flex-column align-items-center mb-lg-0 mb-5">
 					<?php if ( ! empty( $logo ) ): ?>
 						<img width="295" height="368" loading="lazy" class="league-section__logo mb-4" src="<?php echo $logo['url'] ?>"
 						     alt="<?php echo $logo['alt'] ?>">
@@ -63,7 +63,7 @@ if ( $is_preview ) {
 						</a>
 					<?php endif ?>
 				</div>
-				<div class="col-lg-7">
+				<div class="col-lg-7 offset-lg-1">
 					<?php if ( $text ): ?>
 						<div class="local-league-section__text"><?php echo $text ?></div>
 					<?php endif ?>

@@ -79,7 +79,10 @@ if ( $is_preview ) {
 					<?php if ( ! empty( $events ) ): ?>
 						<div class="local-events-section__events">
 							<?php foreach ( $events as $event ): ?>
-								<a href="<?php echo $event['link']['url'] ?>" class="pc-button pc-button--outline">
+								<a
+									href="<?php echo $event['link']['url'] ?>"
+								   class="pc-button pc-button--outline"
+									<?php echo $event['link']['url'] === '#' ? 'disabled' : null ?>>
 									<?php echo $event['link']['title'] ?>
 								</a>
 							<?php endforeach ?>

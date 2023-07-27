@@ -47,7 +47,7 @@ $intro_section = get_field( 'intro_slider' );
 <?php else: ?>
 	<section class="intro-section" id="<?php echo esc_attr( $id ); ?>" <?php echo $wrapper_attributes; ?>>
 		<div class="splide" aria-label="Banner" data-intro-slider>
-			<div class="splide__arrows">
+			<div class="splide__arrows <?php echo count( $intro_section ) > 1 ? '' : 'd-none' ?>">
 				<button class="splide__arrow splide__arrow--prev">
 					<svg width="65" height="65">
 						<use xlink:href="#slider-arrow-prev"/>
@@ -75,10 +75,9 @@ $intro_section = get_field( 'intro_slider' );
 											srcset="<?php echo $slide['image']['url'] ?>"
 											media="(min-width: 1024px)">
 
-										<img class=""
-										     loading="lazy"
-										     src="<?php echo $slide['mobile_image']['url'] ?: $slide['image']['url'] ?>"
-										     alt="<?php echo $slide['image']['alt'] ?>">
+										<img
+											src="<?php echo $slide['mobile_image']['url'] ?: $slide['image']['url'] ?>"
+											alt="<?php echo $slide['image']['alt'] ?>">
 									</picture>
 								</a>
 							</div>
