@@ -52,7 +52,9 @@ $quote_section = get_field( 'quote_section' );
 					<div class="splide__list">
 						<?php foreach ( $quote_section as $quote ): ?>
 							<div class="splide__slide quote">
-								<h2 class="quote__title h4"><?php echo $quote['rating'] ?><?php _e(' Stars','flyingaxes'); ?></h2>
+								<h2 class="quote__title h4">
+									<?php echo $quote['rating'] ?><?php _e(' Stars','flyingaxes'); ?>
+								</h2>
 								<div class="quote__rating stars-rating" style="--rating: <?php echo $quote['rating'] ?>;"
 								     role="img"
 								     aria-label="Google reviews rating: <?php echo $quote['rating'] ?> of 5"></div>
@@ -61,12 +63,12 @@ $quote_section = get_field( 'quote_section' );
 										<?php echo $quote['text'] ?>
 									</blockquote>
 								<?php endif ?>
-								<?php if ( $quote['author'] ): ?>
-									<p class="quote__author">- <?php echo $quote['author'] ?> / Google review</p>
-								<?php endif ?>
 								<div class="quote__rating stars-rating" style="--rating: <?php echo $quote['rating'] ?>;"
 								     role="img"
 								     aria-label="Google reviews rating: <?php echo $quote['rating'] ?> of 5"></div>
+								<?php if ( $quote['author'] ): ?>
+									<p class="quote__author">- <?php echo $quote['author'] ?> / Google review</p>
+								<?php endif ?>
 							</div>
 						<?php endforeach ?>
 					</div>

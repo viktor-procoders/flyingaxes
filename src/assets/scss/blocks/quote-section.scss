@@ -33,9 +33,11 @@
     &__title {
       text-transform: uppercase;
       color: $yellow;
+      margin-bottom: 25px;
     }
 
     &__rating {
+      line-height: 1;
       font-size: 30px;
 
       &::before {
@@ -49,7 +51,7 @@
     &__text {
       font-size: 30px;
       font-family: $prohibition;
-      margin-bottom: 30px;
+      margin: 15px 0;
 
       @media (min-width: 768px) {
         font-size: 50px;
@@ -59,8 +61,7 @@
     &__author {
       font-size: 20px;
       font-weight: 300;
-      margin-bottom: 30px;
+      margin-top: 20px;
     }
   }
 }
-
