@@ -24,7 +24,6 @@ endif;
 
 add_action( 'wp_enqueue_scripts', function () {
 	wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'app.css' ), array(), null );
-	wp_enqueue_style( 'glightbox', 'https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css', '', '1.0.0', 'all' );
 
 	// register g-blocks styles
 	wp_register_style( 'intro-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'intro-section.css' ), null, null );

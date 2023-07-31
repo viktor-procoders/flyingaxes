@@ -51,7 +51,6 @@ if (!function_exists('flyingaxes_theme_support')) :
 		);
 		add_theme_support('custom-logo', $defaults);
 
-		// Add foundation.css as editor style https://codex.wordpress.org/Editor_Style
 //		add_editor_style( 'dist/assets/css/' . flyingaxes_asset_path( 'app.css' ) );
 	}
 

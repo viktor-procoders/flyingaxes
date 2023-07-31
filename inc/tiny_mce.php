@@ -123,19 +123,19 @@ add_filter( 'tiny_mce_before_init', function ( $init ) {
 				'items' => [
 					[
 						'title'    => 'Light Blue',
-						'selector' => 'h1,h2,h3,h4,h5,h6,p',
+						'selector' => 'p,h1,h2,h3,h4,h5,h6',
 						'inline'   => 'span',
 						'classes'  => 'text-light-blue'
 					],
 					[
 						'title'    => 'Blue',
-						'selector' => 'h1,h2,h3,h4,h5,h6,p',
+						'selector' => 'p,h1,h2,h3,h4,h5,h6',
 						'inline'   => 'span',
 						'classes'  => 'text-blue'
 					],
 					[
 						'title'    => 'Red',
-						'selector' => 'h1,h2,h3,h4,h5,h6,p',
+						'selector' => 'p,h1,h2,h3,h4,h5,h6',
 						'inline'   => 'span',
 						'classes'  => 'text-red'
 					],

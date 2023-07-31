@@ -82,6 +82,8 @@ export class Main {
         lightBoxContent.forEach((content) => {
           const contentDataAttr = content.getAttribute('data-lightbox-content');
 
+          if (!contentDataAttr) return;
+
           if (btnDataAttr === contentDataAttr) {
             showContent(content);
           } else {
