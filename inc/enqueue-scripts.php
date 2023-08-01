@@ -83,7 +83,7 @@ add_action( 'wp_enqueue_scripts', function () {
 
 	$jsUrlApp = get_stylesheet_directory() . '/dist/assets/css/' . pc_asset_path( 'app.css' );
 	$jsTimeApp = filemtime( $jsUrlApp );
-	wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'app.js' ), array(), $jsTimeApp );
+	wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'app.js' ), array(), $jsTimeApp );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
