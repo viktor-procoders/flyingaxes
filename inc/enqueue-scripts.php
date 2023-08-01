@@ -23,30 +23,41 @@ if ( ! function_exists( 'pc_asset_path' ) ) :
 endif;
 
 add_action( 'wp_enqueue_scripts', function () {
-	wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'app.css' ), array(), null );
 
 	// register g-blocks styles
-	wp_register_style( 'intro-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'intro-section.css' ), null, null );
-	wp_register_style( 'experience-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'experience-section.css' ), null, null );
-	wp_register_style( 'cta-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'cta-section.css' ), null, null );
-	wp_register_style( 'special-events-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'special-events-section.css' ), null, null );
-	wp_register_style( 'league-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'league-section.css' ), null, null );
-	wp_register_style( 'featured-on-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'featured-on-section.css' ), null, null );
-	wp_register_style( 'info-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'info-section.css' ), null, null );
-	wp_register_style( 'quote-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'quote-section.css' ), null, null );
-	wp_register_style( 'brewery-selection-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'brewery-selection-section.css' ), null, null );
-	wp_register_style( 'local-events-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'local-events-section.css' ), null, null );
-	wp_register_style( 'local-league-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'local-league-section.css' ), null, null );
-	wp_register_style( 'gift-posts-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'gift-posts-section.css' ), null, null );
-	wp_register_style( 'seo-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'seo-section.css' ), null, null );
-	wp_register_style( 'keywords-slider-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'keywords-slider-section.css' ), null, null );
-	wp_register_style( 'event-planning-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'event-planning-section.css' ), null, null );
-	wp_register_style( 'safety-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'safety-section.css' ), null, null );
-	wp_register_style( 'intro-booking-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'intro-booking-section.css' ), null, null );
-	wp_register_style( 'how-to-play-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'how-to-play-section.css' ), null, null );
-	wp_register_style( 'join-league-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'join-league-section.css' ), null, null );
-	wp_register_style( 'schedule-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'schedule-section.css' ), null, null );
-	wp_register_style( 'newsletter-section', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'newsletter-section.css' ), null, null );
+	$styles = [
+		'intro-section'             => 'intro-section.css',
+		'experience-section'        => 'experience-section.css',
+		'cta-section'               => 'cta-section.css',
+		'special-events-section'    => 'special-events-section.css',
+		'league-section'            => 'league-section.css',
+		'featured-on-section'       => 'featured-on-section.css',
+		'info-section'              => 'info-section.css',
+		'quote-section'             => 'quote-section.css',
+		'brewery-selection-section' => 'brewery-selection-section.css',
+		'local-events-section'      => 'local-events-section.css',
+		'local-league-section'      => 'local-league-section.css',
+		'gift-posts-section'        => 'gift-posts-section.css',
+		'seo-section'               => 'seo-section.css',
+		'keywords-slider-section'   => 'keywords-slider-section.css',
+		'event-planning-section'    => 'event-planning-section.css',
+		'safety-section'            => 'safety-section.css',
+		'intro-booking-section'     => 'intro-booking-section.css',
+		'how-to-play-section'       => 'how-to-play-section.css',
+		'join-league-section'       => 'join-league-section.css',
+		'schedule-section'          => 'schedule-section.css',
+		'newsletter-section'        => 'newsletter-section.css',
+	];
+
+	foreach ( $styles as $handle => $filename ) {
+		$cssUrl = get_stylesheet_directory() . '/dist/assets/css/' . pc_asset_path( $filename );
+		$cssTime = filemtime( $cssUrl );
+		wp_register_style( $handle, get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( $filename ), null, $cssTime );
+	}
+
+	$cssUrlApp = get_stylesheet_directory() . '/dist/assets/css/' . pc_asset_path( 'app.css' );
+	$cssTimeApp = filemtime( $cssUrlApp );
+	wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/dist/assets/css/' . pc_asset_path( 'app.css' ), array(), $cssTimeApp );
 
 	// Deregister the jquery version bundled with WordPress.
 	wp_deregister_script( 'jquery' );
@@ -55,13 +66,24 @@ add_action( 'wp_enqueue_scripts', function () {
 	wp_deregister_script( 'jquery-migrate' );
 
 	// register g-blocks scripts
-	wp_register_script( 'tabs', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'tabs.js' ), null, null );
-	wp_register_script( 'intro-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'intro-section.js' ), null, null );
-	wp_register_script( 'featured-on-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'featured-on-section.js' ), null, null );
-	wp_register_script( 'special-events-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'special-events-section.js' ), null, null );
-	wp_register_script( 'quote-section', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'quote-section.js' ), null, null );
+	$scripts = [
+		'tabs'                   => 'tabs.js',
+		'intro-section'          => 'intro-section.js',
+		'featured-on-section'    => 'featured-on-section.js',
+		'special-events-section' => 'special-events-section.js',
+		'quote-section'          => 'quote-section.js',
+	];
 
-	wp_enqueue_script( 'app', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'app.js' ), null, null );
+	foreach ( $scripts as $handle => $filename ) {
+		$jsUrl = get_stylesheet_directory() . '/dist/assets/js/' . pc_asset_path( $filename );
+		$jsTime = filemtime( $jsUrl );
+		wp_register_script( $handle, get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( $filename ), null, $jsTime, true );
+	}
+
+
+	$jsUrlApp = get_stylesheet_directory() . '/dist/assets/css/' . pc_asset_path( 'app.css' );
+	$jsTimeApp = filemtime( $jsUrlApp );
+	wp_enqueue_style( 'app', get_stylesheet_directory_uri() . '/dist/assets/js/' . pc_asset_path( 'app.js' ), array(), $jsTimeApp );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

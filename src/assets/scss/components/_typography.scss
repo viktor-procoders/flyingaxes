@@ -15,7 +15,7 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
 
 h1, .h1 {
   font-size: 52px;
-  font-family: $headings-font-family-70;
+  font-family: $prohibition;
   @media (min-width: 768px) {
     font-size: 80px;
   }
@@ -40,12 +40,12 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: 50px;
-  font-family: $headings-font-family-70;
+  font-family: $prohibition;
 }
 
 h5, .h5 {
   font-size: 30px;
-  font-family: $headings-font-family-30;
+  font-family: $prohibition;
 }
 
 p {

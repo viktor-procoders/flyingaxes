@@ -15,7 +15,7 @@
   border: none;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   @supports (-webkit-hyphens:none) {
-    padding: 19px 32px 16px 32px;
+    padding: 20px 32px 16px 32px;
   }
 
 
@@ -42,7 +42,7 @@
     font-weight: 600;
     color: $blue;
     @supports (-webkit-hyphens:none) {
-      padding: 11px 18px 8px 18px;
+      padding: 13px 18px 8px 18px;
     }
 
     &:hover, &:focus {
